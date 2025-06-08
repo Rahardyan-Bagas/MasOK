@@ -181,6 +181,9 @@
 
       <input type="password" id="confirmPassword" class="input-field" placeholder="Konfirmasi Password" required>
       <div class="error-message" id="confirmPasswordError"></div>
+        <p style="margin-top: 20px; font-size: 14px;">
+        Sudah punya akun? <a href="/login">Log in di sini</a>
+        </p>
 
       <button type="submit" class="signup-button">Sign Up</button>
     </form>
@@ -218,8 +221,8 @@
         document.getElementById('successMessage').style.display = 'block';
         this.reset();
         setTimeout(() => {
-          document.getElementById('successMessage').style.display = 'none';
-        }, 4000);
+        window.location.href = '/login'; // atau 'login.php' sesuai file kamu
+        }, 2000);
       }
     });
 

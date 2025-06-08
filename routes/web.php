@@ -8,5 +8,49 @@ use Illuminate\Support\Facades\Route;
 #});
 
 Route::get('/', function () {
-    return view('TentangKamiPage'); // tanpa .blade.php dan tanpa folder 'views'
+    return view('homepage'); 
+});
+
+Route::get('/home', function () {
+    return view('homepage'); 
+});
+
+Route::get('/login', function () {
+    return view('LoginPage'); // <- Tambahan ini penting
+});
+
+Route::get('/signup', function () {
+    return view('SignUpPage');
+});
+
+Route::get('/lokasi', function () {
+    return view('LokasiIndonesiaMapPage'); // <- Tambahan ini penting
+});
+
+Route::get('/makanan', function () {
+    return view('MakananYogya');
+});
+
+Route::get('/resep', function () {
+    return view('resep'); // <- Tambahan ini penting
+});
+
+Route::get('/restoran', function () {
+    return view('restoran');
+});
+
+Route::get('/tentang', function () {
+    return view('TentangKamiPage');
+});
+
+Route::get('/resepgudeg', function () {
+    return view('resepGudeg'); // <- Tambahan ini penting
+});
+
+Route::get('/reseprendang', function () {
+    return view('resepRendang');
+});
+
+Route::get('/resepsate', function () {
+    return view('resepSate');
 });

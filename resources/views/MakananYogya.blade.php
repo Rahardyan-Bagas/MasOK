@@ -27,6 +27,19 @@
             position: relative;
         }
 
+        .content-container {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+
         /* Background */
         .background-image {
             position: fixed;
@@ -36,47 +49,53 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.15;
         }
 
         /* Logo */
         .logo-container {
-            width: 120px;
-            height: auto;
-            margin-bottom: 20px;
-        }
+    position: absolute;
+    top: 20px;
+    left: -100px;
+    width: 120px;
+    height: auto;
+    margin-bottom: 0; /* hapus margin bawah */
+    z-index: 10; /* supaya di atas background */
+}
 
         .logo-image {
             width: 100%;
+            height: 60px;
             object-fit: contain;
         }
 
         /* Header title */
         .page-title {
-            font-size: 48px;
-            font-weight: 700;
-            text-align: left;
-            margin: 20px 0;
-            color: #000;
-        }
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    margin: 20px 0;
+    color: #000;
+}
 
         /* Top Bar: Lokasi + Menu Icon di kanan atas */
         .top-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
 
         .lokasi-text {
-            font-size: 20px;
+            font-size: 30px;
             font-weight: 600;
             color: #000;
         }
 
         .menu-icon {
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
             cursor: pointer;
         }
         /* Search */
@@ -87,7 +106,7 @@
             border: 1px solid #000;
             border-radius: 15px;
             padding: 10px 15px;
-            max-width: 600px;
+            max-width: 750px;
         }
         
         .search-input {
@@ -264,17 +283,14 @@
 <body>
     <div class="main-container">
         <!-- Background Image -->
-        <img src="images/img_image_14.png" alt="Traditional Indonesian Batik Background"
+        <img src="images/img_image_15.png" alt="Traditional Indonesian Batik Background"
             class="background-image">
 
         <!-- Logo Container -->
         <div class="logo-container">
-            <img src="images/img_screenshot20250527145618removebgpreview_1.png" alt="Narad Logo"
+            <img src="images/img_screenshot20250527145618removebgpreview_1.png" onclick="pindahhome()" alt="Narad Logo"
                 class="logo-image">
         </div>
-
-        <!-- Page Title -->
-        <h1 class="page-title">Yogyakarta</h1>
 
         <!-- Top Bar: Lokasi + Menu -->
         <div class="top-bar">
@@ -282,6 +298,8 @@
             <img src="images/img_menu.svg" alt="Menu" class="menu-icon" onclick="toggleMobileMenu()">
         </div>
 
+        <!-- Page Title -->
+        <h1 class="page-title">Yogyakarta</h1>
 
         <!-- Main Content Container -->
         <div class="content-container">
@@ -292,7 +310,7 @@
             </div>
 
             <!-- Restaurant Cards -->
-            <div class="restaurant-card restaurant-card-1" onclick="openRestaurant('bajog')">
+            <div class="restaurant-card restaurant-card-1" onclick="pindahrestoran()">
                 <img src="images/img_button.png" alt="Iga BAJOG Restaurant"
                     class="restaurant-image restaurant-image-1">
                 <div class="restaurant-info">
@@ -376,6 +394,12 @@
 
             console.log('Search results:', filteredResults);
         }
+        function pindahrestoran(){
+            window.location.href = '/restoran';
+        }
+        function pindahhome(){
+            window.location.href = '/home';
+        }
 
         // Restaurant navigation
         function openRestaurant(restaurantId) {
@@ -425,6 +449,7 @@ Layanan: ${restaurant.services.join(', ')}`);
             console.log('Navigating to:', page);
             toggleMobileMenu(); // Close menu after navigation
         }
+        
 
         // Search on Enter key
         document.getElementById('searchInput').addEventListener('keypress', function (e) {
