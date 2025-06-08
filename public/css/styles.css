@@ -1,0 +1,197 @@
+/* === General Reset & Styling === */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+.main-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-pattern {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.map-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    max-width: 1200px;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* === Header === */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.logo-container .logo {
+    height: 40px;
+}
+
+.page-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+    font-style: italic;
+}
+
+.menu-icon {
+    height: 24px;
+    cursor: pointer;
+}
+
+/* === Map Pins === */
+.map-pin {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: #000;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 4;
+}
+
+.map-pin:hover + .tooltip {
+    display: block;
+}
+
+/* === Modal === */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.map {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.location-pin {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: red;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease;
+}
+
+.location-pin:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* === Responsive Pins (optional, not exact placement) === */
+.pin-1 { top: 48%; left: 36%; }
+.pin-2 { top: 51%; left: 35%; }
+.pin-3 { top: 32%; left: 23%; }
+.pin-4 { top: 48%; left: 28%; }
+.pin-5 { top: 39%; left: 28%; }
+.pin-6 { top: 40%; left: 24%; }
+.pin-7 { top: 43%; left: 30%; }
+.pin-8 { top: 47%; left: 25%; }
+.pin-9 { top: 50%; left: 32%; }
+.pin-10 { top: 53%; left: 42%; }
+.pin-11 { top: 55%; left: 47%; }
+.pin-12 { top: 54%; left: 43%; }
+.pin-13 { top: 53%; left: 44%; }
+.pin-14 { top: 56%; left: 46%; }
+.pin-15 { top: 57%; left: 45%; }
+.pin-16 { top: 58%; left: 44%; }
+.pin-17 { top: 59%; left: 65%; }
+.pin-18 { top: 40%; left: 91%; }
+.pin-19 { top: 42%; left: 29%; }
+.pin-20 { top: 48%; left: 36%; }
+.pin-21 { top: 45%; left: 40%; }
+.pin-22 { top: 46%; left: 42%; }
+.pin-23 { top: 60%; left: 50%; }
+.pin-24 { top: 62%; left: 52%; }
+.pin-25 { top: 65%; left: 55%; }
+.pin-26 { top: 51%; left: 68%; }
+.pin-27 { top: 45%; left: 66%; }
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 24px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .map-pin {
+        width: 16px;
+        height: 16px;
+    }
+}
