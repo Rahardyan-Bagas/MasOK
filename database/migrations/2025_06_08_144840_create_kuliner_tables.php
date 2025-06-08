@@ -9,6 +9,7 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
+
     public function up()
     {
         // Tabel User
@@ -95,5 +96,6 @@ return new class extends Migration
         Schema::dropIfExists('makanan');
         Schema::dropIfExists('daerah');
         Schema::dropIfExists('user');
+
     }
 };
