@@ -1,197 +1,117 @@
-/* === General Reset & Styling === */
-body, html {
+/* Style dasar */
+body {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fff;
-    overflow-x: hidden;
-}
-
-.main-container {
+    font-family: sans-serif;
+    background-color: white;
     position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
 }
 
-.background-pattern {
-    position: absolute;
-    width: 100%;
+/* Background motif */
+body::before {
+    content: "";
+    background-image: url("../images/background-batik.png");
+    background-size: cover;
+    opacity: 0.1;
+    position: fixed;
+    top: 0;
+    left: 0;
     height: 100%;
-    object-fit: cover;
-    z-index: 0;
+    width: 100%;
+    z-index: -1;
 }
 
-.map-container {
+/* Judul */
+h1 {
+    text-align: center;
+    font-size: 60px;
+    margin: 30px 0;
+    font-weight: bold;
+}
+
+/* Logo pojok kiri */
+.logo {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 90%;
-    max-width: 1200px;
-    transform: translate(-50%, -50%);
+    top: 20px;
+    left: 20px;
+    width: 80px;
+}
+
+/* Logo pojok kanan */
+.logo-kanan {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 80px;
+}
+
+/* Peta Indonesia */
+.indonesia-map {
+    display: block;
+    margin: 50px auto;
+    max-width: 90%;
+    height: auto;
+    position: relative;
     z-index: 1;
 }
 
-/* === Header === */
-.header {
+/* Icon lokasi */
+.location {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 2;
-}
-
-.logo-container .logo {
-    height: 40px;
-}
-
-.page-title {
-    font-size: 32px;
-    font-weight: bold;
-    color: #000;
-    margin: 0;
-    font-style: italic;
-}
-
-.menu-icon {
+    width: 24px;
     height: 24px;
-    cursor: pointer;
 }
-
-/* === Map Pins === */
-.map-pin {
+/* Pin lokasi */
+.pin {
     position: absolute;
     width: 20px;
     height: 20px;
-    cursor: pointer;
-    z-index: 3;
 }
 
-.tooltip {
-    display: none;
-    position: absolute;
-    background-color: #000;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 12px;
-    white-space: nowrap;
-    z-index: 4;
-}
-
-.map-pin:hover + .tooltip {
-    display: block;
-}
-
-/* === Modal === */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 10;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-    background-color: #fff;
-    margin: 10% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-    border-radius: 10px;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-}
-
-.map-container {
-  position: relative;
-  width: 100%;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.map {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.location-pin {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  background-color: red;
-  border-radius: 50%;
-  cursor: pointer;
-  transform: translate(-50%, -50%);
-  transition: transform 0.2s ease;
-}
-
-.location-pin:hover {
-  transform: translate(-50%, -50%) scale(1.2);
-}
-
-/* === Responsive Pins (optional, not exact placement) === */
-.pin-1 { top: 48%; left: 36%; }
-.pin-2 { top: 51%; left: 35%; }
-.pin-3 { top: 32%; left: 23%; }
-.pin-4 { top: 48%; left: 28%; }
-.pin-5 { top: 39%; left: 28%; }
-.pin-6 { top: 40%; left: 24%; }
-.pin-7 { top: 43%; left: 30%; }
-.pin-8 { top: 47%; left: 25%; }
-.pin-9 { top: 50%; left: 32%; }
-.pin-10 { top: 53%; left: 42%; }
-.pin-11 { top: 55%; left: 47%; }
-.pin-12 { top: 54%; left: 43%; }
-.pin-13 { top: 53%; left: 44%; }
-.pin-14 { top: 56%; left: 46%; }
-.pin-15 { top: 57%; left: 45%; }
-.pin-16 { top: 58%; left: 44%; }
-.pin-17 { top: 59%; left: 65%; }
-.pin-18 { top: 40%; left: 91%; }
-.pin-19 { top: 42%; left: 29%; }
-.pin-20 { top: 48%; left: 36%; }
-.pin-21 { top: 45%; left: 40%; }
-.pin-22 { top: 46%; left: 42%; }
-.pin-23 { top: 60%; left: 50%; }
-.pin-24 { top: 62%; left: 52%; }
-.pin-25 { top: 65%; left: 55%; }
-.pin-26 { top: 51%; left: 68%; }
-.pin-27 { top: 45%; left: 66%; }
-
+/* Posisi lokasi */
+.pin1  { top: 300px; left: 450px; } /* Jakarta */
+.pin2  { top: 310px; left: 470px; } /* Bandung */
+.pin3  { top: 250px; left: 490px; } /* Medan */
+.pin4  { top: 270px; left: 510px; } /* Palembang */
+.pin5  { top: 260px; left: 530px; } /* Pekanbaru */
+.pin6  { top: 255px; left: 550px; } /* Padang */
+.pin7  { top: 265px; left: 570px; } /* Jambi */
+.pin8  { top: 275px; left: 590px; } /* Bengkulu */
+.pin9  { top: 285px; left: 610px; } /* Lampung */
+.pin10 { top: 295px; left: 630px; } /* Semarang */
+.pin11 { top: 305px; left: 650px; } /* Surabaya */
+.pin12 { top: 315px; left: 670px; } /* Yogyakarta */
+.pin13 { top: 325px; left: 690px; } /* Solo */
+.pin14 { top: 335px; left: 710px; } /* Malang */
+.pin15 { top: 345px; left: 730px; } /* Kediri */
+.pin16 { top: 355px; left: 750px; } /* Madiun */
+.pin17 { top: 365px; left: 770px; } /* Makassar */
+.pin18 { top: 375px; left: 790px; } /* Jayapura */
+.pin19 { top: 385px; left: 810px; } /* Pontianak */
+.pin20 { top: 395px; left: 830px; } /* Banjarmasin */
+.pin21 { top: 405px; left: 850px; } /* Balikpapan */
+.pin22 { top: 415px; left: 870px; } /* Samarinda */
+.pin23 { top: 425px; left: 890px; } /* Denpasar */
+.pin24 { top: 435px; left: 910px; } /* Mataram */
+.pin25 { top: 445px; left: 930px; } /* Kupang */
+.pin26 { top: 455px; left: 950px; } /* Palu */
+.pin27 { top: 465px; left: 970px; } /* Manado */
 /* === Responsive === */
 @media (max-width: 768px) {
-    .page-title {
-        font-size: 24px;
-    }
+  .page-title {
+    font-size: 24px;
+  }
 
-    .modal-content {
-        width: 90%;
-    }
+  .modal-content {
+    width: 90%;
+  }
 
-    .map-pin {
-        width: 16px;
-        height: 16px;
-    }
+  .map-pin {
+    width: 16px;
+    height: 16px;
+  }
+
+  .tooltip {
+    font-size: 10px;
+  }
 }
