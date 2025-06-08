@@ -378,41 +378,36 @@
         <!-- Recipe Container -->
         <main class="recipe-container">
             <!-- Recipe Title -->
-            <h2 class="recipe-title">Rendang</h2>
+            <h2 class="recipe-title">Gudeg</h2>
             
             <!-- Food Image -->
-            <img src="images/img_image.png" alt="Delicious Traditional Indonesian Rendang" class="food-image">
+            <img src="images/gudeg.png" alt="Delicious Traditional Indonesian Rendang" class="food-image">
             
             <!-- Ingredients Section -->
             <h3 class="ingredients-title">Bahan - bahan :</h3>
-            <div class="ingredients-list">1 kg daging sapi (bagian paha atau sengkel), potong kotak besar
-1,5 liter santan kental dari 2 butir kelapa tua
-10 siung bawang merah
-5 siung bawang putih
-5 buah cabai merah besar
-10 buah cabai merah keriting (sesuai selera)
-2 cm jahe
-2 cm lengkuas
-2 cm kunyit (bakar sebentar)</div>
+            <div class="ingredients-list">1,5 kg nangka muda, potong ukuran 3 cm x 5 cm
+250 gram daging tetelan
+1 liter santan dari 2 butir kelapa
+4 lembar daun salam
+1 iris lengkuas
+1 sdm angkak
+100 gram gula merah</div>
             
             <!-- Additional Ingredients -->
-            <div class="additional-ingredients">1 sdt ketumbar sangrai
-1 sdt jintan sangrai
-½ sdt pala bubuk
-2 batang serai, memarkan
-5 lembar daun jeruk
-2 lembar daun kunyit, simpulkan
-2 lembar daun salam
-Garam dan gula merah secukupnya</div>
+            <div class="additional-ingredients">3 sdm bawah merah iris
+2 sdm bawang putih iris
+10 buah kemiri
+1 sdm ketumbar
+1 sdt garam</div>
             
             <!-- Cooking Instructions -->
             <h3 class="cooking-title">Cara Memasak :</h3>
-            <div class="cooking-instructions">Tumis bumbu halus hingga harum.
-Masukkan daging sapi, aduk rata hingga berubah warna.
-Tuang santan secara perlahan sambil diaduk rata agar tidak pecah.
-Masukkan daun salam, daun jeruk, daun kunyit, dan serai.
-Masak dengan api kecil selama 3–4 jam sambil sesekali diaduk hingga santan mengental dan berubah menjadi minyak.
-Masak terus hingga daging empuk, kering, dan bumbu meresap sempurna.</div>
+            <div class="cooking-instructions">Siram nangka dengan air mendidih supaya getahnya terlepas, kemudian tiriskan. 
+Masukkan nangka ke dalam panci presto beserta daging, bumbu, dan santan. Tutup presto dan kunci. 
+Masak dalam panci presto selama 45 menit. 
+Angkat. Buka katup pengatur suhunya, biarkan uap keluar semua. 
+Setelah itu buka panci dan angkat. 
+Hidangkan gudeg nangka khas Yogyakarta selagi hangat bersama nasi merah atau putih.</div>
             
             <!-- Rating Section -->
             <div class="rating-section">
