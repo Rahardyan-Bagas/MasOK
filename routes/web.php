@@ -8,5 +8,5 @@ use Illuminate\Support\Facades\Route;
 #});
 
 Route::get('/', function () {
-    return view('SignUpPage'); // tanpa .blade.php dan tanpa folder 'views'
+    return view('TentangKamiPage'); // tanpa .blade.php dan tanpa folder 'views'
 });
