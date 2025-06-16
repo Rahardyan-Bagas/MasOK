@@ -30,6 +30,10 @@ function toggleMenu() {
   alert('Menu clicked! Navigation menu would open here.');
 }
 
+function pindahhome(){
+    window.location.href='';
+}
+
 function toggleMenu() {
     const menu = document.getElementById('dropdownMenu');
     menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
