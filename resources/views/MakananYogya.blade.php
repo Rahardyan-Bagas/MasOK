@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Narad Yogyakarta Food Search</title>
-    <link rel="stylesheet" href="{{ asset('stylesMakanan.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/stylesMakanan.css') }}">
 </head>
 
 <body>
@@ -85,7 +85,7 @@
             </div>
         </div>
     </div>
-    <script src="{{ asset('makananJogja.js') }}"></script>
+    <script src="{{ asset('js/makananJogja.js') }}"></script>
 </body>
 
 </html>
