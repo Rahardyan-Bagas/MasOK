@@ -12,6 +12,7 @@
             padding: 0;
         }
 
+
        body {
   font-family: 'Inter', sans-serif;
             background-color: #ffffff;
@@ -28,12 +29,15 @@
   margin: 0 auto;
 }
 
+
         /* Background Images */
         .bg-image-1 {
             position: absolute;
             top: 0;
             left: 361px;
+
             width: 25%;
+
             height: 172px;
             z-index: 1;
         }
@@ -43,6 +47,7 @@
             top: 278px;
             left: 0;
             width: 100%;
+
             height: 746px;
             z-index: 2;
         }
@@ -51,7 +56,9 @@
             position: absolute;
             top: 392px;
             left: 0;
+
             width: 100%;
+
             height: 518px;
             z-index: 3;
         }
@@ -61,6 +68,7 @@
             top: 0;
             left: 724px;
             width: 25%;
+
             height: 172px;
             z-index: 4;
         }
@@ -78,7 +86,9 @@
             position: absolute;
             top: 0;
             left: 1081px;
+
             width: 30%;
+
             height: 172px;
             z-index: 6;
         }
@@ -89,6 +99,7 @@
             top: 171px;
             left: 0;
             width: 100%;
+
             height: 106px;
             background-color: #fa0505;
             z-index: 10;
@@ -376,6 +387,7 @@
         <img src="images/img_image_2.png" alt="Indonesian Food Background 5" class="bg-image-5">
         <img src="images/taliwang.png" alt="Indonesian Food Background 6" class="bg-image-6">
 
+
         <!-- Navigation Bar -->
         <nav class="navbar">
             <!-- Search Container -->
@@ -390,9 +402,11 @@
                     <a href="#menu" class="nav-text">Menu</a>
                     <img src="images/img_icon.svg" alt="Menu Icon" class="nav-icon">
                     <div class="dropdown-content">
+
                         <a href="/lokasi">Peta Indonesia</a>
                         <a href="/resep">Resep Makanan</a>
                         <a href="/makanan">Makanan Daerah</a>
+
                     </div>
                 </div>
 
@@ -408,6 +422,7 @@
 
                 <div class="nav-item">
                     <a href="#tentang" onclick="pindahtentang()" class="nav-text">Tentang Kami</a>
+
                 </div>
             </div>
 
@@ -500,6 +515,7 @@
         // Login modal functionality
         function showLogin() {
         window.location.href = '/login'; // arahkan ke route Laravel
+
         }
 
         function closeLogin() {

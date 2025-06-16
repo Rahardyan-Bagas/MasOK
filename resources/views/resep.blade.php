@@ -281,6 +281,7 @@
         <header class="header">
             <div class="logo-container">
                 <img src="images/img_screenshot20250527145618removebgpreview_1.png" onclick="pindahhome()" alt="Narad Logo" class="logo">
+
             </div>
             
             <h1 class="site-title">Resep</h1>
@@ -304,6 +305,7 @@
                     <button onclick="pindahresepgudeg()"></button>
                     <div class="recipe-footer">
                         <a href="#" class="recipe-link" onclick="pindahresepgudeg()">Resep Lengkap</a>
+
                         <div class="rating-container">
                             <img src="images/img_starfilled.svg" alt="Star" class="star">
                             <img src="images/img_starfilled.svg" alt="Star" class="star">
@@ -326,6 +328,7 @@
                     </p>
                     <div class="recipe-footer">
                         <a href="#" class="recipe-link" onclick="pindahreseprendang()">Resep Lengkap</a>
+
                         <div class="rating-container">
                             <img src="images/img_starfilled.svg" alt="Star" class="star">
                             <img src="images/img_starfilled.svg" alt="Star" class="star">
@@ -348,6 +351,7 @@
                     </p>
                     <div class="recipe-footer">
                         <a href="#" class="recipe-link" onclick="pindahresepsate()">Resep Lengkap</a>
+
                         <div class="rating-container">
                             <img src="images/img_starfilled.svg" alt="Star" class="star">
                             <img src="images/img_starfilled.svg" alt="Star" class="star">
@@ -362,6 +366,7 @@
     </div>
 
     <script>
+
         function pindahresepgudeg(){
             window.location.href = '/resepgudeg';
         }
@@ -423,9 +428,6 @@
                 console.log('Recipe data loaded');
             }, 500);
         });
-
-        
-
         // Add scroll effects for better UX
         window.addEventListener('scroll', function() {
             const cards = document.querySelectorAll('.recipe-card');

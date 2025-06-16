@@ -304,6 +304,7 @@
         <!-- Logo Container -->
         <div class="logo-container">
             <img src="images/img_screenshot20250527145618removebgpreview_1.png" onclick="pindahhome()" alt="Restaurant Logo" class="logo-image">
+
         </div>
         
         <!-- Location Text -->
@@ -346,6 +347,7 @@
     </div>
 
     <script>
+
         function pindahhome(){
             window.location.href = '/home';
         }
