@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lokasi - Indonesia Map</title>
-    <link rel="stylesheet" href="{{ asset('stylesLokasi.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/stylesLokasi.css') }}">
 </head>
 <body>
     <div class="main-container">
@@ -121,6 +121,6 @@
     </div>
     
     <div id="someContainer" class="popup"></div>
-    <script src="{{ asset('lokasiIndonesia.js') }}"></script>
+    <script src="{{ asset('js/lokasiIndonesia.js') }}"></script>
 </body>
 </html>
