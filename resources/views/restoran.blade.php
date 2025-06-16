@@ -37,7 +37,7 @@
                 <img src="images/img_starfilled.svg" alt="Star" class="star">
                 <img src="images/img_starfilled.svg" alt="Star" class="star">
                 <img src="images/img_starfilled.svg" alt="Star" class="star">
-                <img src="images/img_image_22.png" alt="Half Star" class="star">
+                <img src="images/img_image_22.png" alt="Half Star" class="star half">
                 <span class="rating-number">4,3</span>
             </div>
             
@@ -56,6 +56,5 @@
         </div>
     </div>
     <script src="{{ asset('js/restoran.js') }}"></script>
-    
 </body>
 </html>

@@ -36,18 +36,12 @@
                     <p class="recipe-description">
                         Gudeg adalah makanan khas Yogyakarta yang terbuat dari nangka muda yang dimasak dengan santan dan bumbu-bumbu hingga berwarna cokelat dan beraroma khas. Rasanya manis dan gurih, biasanya disajikan dengan nasi, ayam opor, telur, tahu/tempe bacem, dan sambal krecek.
                     </p>
-                    <button onclick="pindahresepgudeg()"></button>
                     <div class="recipe-footer">
-                        <a href="#" class="recipe-link" onclick="pindahresepgudeg()">Resep Lengkap</a>
-
-                        <div class="rating-container">
-                            <img src="images/img_starfilled.svg" alt="Star" class="star">
-                            <img src="images/img_starfilled.svg" alt="Star" class="star">
-                            <img src="images/img_starfilled.svg" alt="Star" class="star">
-                            <img src="images/img_starfilled.svg" alt="Star" class="star">
-                            <img src="images/img_image_22.png" alt="Half Star" class="rating-image">
-                        </div>
-                    </div>
+  <a href="#" class="recipe-link" onclick="pindahresepgudeg()">Resep Lengkap</a>
+  <div class="stars">
+    ★ ★ ★ ★ ★
+  </div>
+</div>
                 </div>
             </article>
             
@@ -63,13 +57,9 @@
                     <div class="recipe-footer">
                         <a href="#" class="recipe-link" onclick="pindahreseprendang()">Resep Lengkap</a>
 
-                        <div class="rating-container">
-                            <img src="images/img_starfilled.svg" alt="Star" class="star">
-                            <img src="images/img_starfilled.svg" alt="Star" class="star">
-                            <img src="images/img_starfilled.svg" alt="Star" class="star">
-                            <img src="images/img_starfilled.svg" alt="Star" class="star">
-                            <img src="images/img_image_22.png" alt="Half Star" class="rating-image">
-                        </div>
+                        <div class="stars">
+    ★ ★ ★ ★ ★
+  </div>
                     </div>
                 </div>
             </article>
@@ -86,13 +76,9 @@
                     <div class="recipe-footer">
                         <a href="#" class="recipe-link" onclick="pindahresepsate()">Resep Lengkap</a>
 
-                        <div class="rating-container">
-                            <img src="images/img_starfilled.svg" alt="Star" class="star">
-                            <img src="images/img_starfilled.svg" alt="Star" class="star">
-                            <img src="images/img_starfilled.svg" alt="Star" class="star">
-                            <img src="images/img_starfilled.svg" alt="Star" class="star">
-                            <img src="images/img_image_22.png" alt="Half Star" class="rating-image">
-                        </div>
+                        <div class="stars">
+    ★ ★ ★ ★ ★
+  </div>
                     </div>
                 </div>
             </article>
