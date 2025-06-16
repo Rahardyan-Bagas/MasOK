@@ -1,0 +1,265 @@
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            position: relative;
+            overflow-x: auto;
+        }
+
+        .main-container {
+            position: relative;
+            width: 1440px;
+            height: 1024px;
+            background-color: #ffffff;
+        }
+
+        .background-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1440px;
+            height: 1024px;
+            z-index: 1;
+        }
+
+        .header {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 21px 31px 0;
+        }
+
+        .logo-container {
+            background-color: #ffffff;
+            width: 77px;
+            height: 107px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+        }
+
+        .logo {
+            width: 72px;
+            height: 102px;
+            object-fit: contain;
+        }
+
+        .site-title {
+            font-size: 70px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            line-height: 85px;
+            color: #000000;
+            text-align: left;
+        }
+
+        .menu-container {
+            background-color: #ffffff;
+            width: 66px;
+            height: 64px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .menu-container:hover {
+            background-color: #f5f5f5;
+            transform: scale(1.05);
+        }
+
+        .menu-icon {
+            width: 28px;
+            height: 29px;
+        }
+
+        .recipes-container {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            gap: 71px;
+            padding: 0 72px;
+            margin-top: 151px;
+        }
+
+        .recipe-card {
+            background-color: #ffffff;
+            width: 385px;
+            height: 622px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .recipe-image {
+            width: 385px;
+            height: 308px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .recipe-content {
+            padding: 15px;
+            position: relative;
+        }
+
+        .recipe-title {
+            font-size: 30px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            line-height: 37px;
+            color: #000000;
+            margin-bottom: 8px;
+        }
+
+        .divider {
+            width: 181px;
+            height: 1px;
+            background-color: #000000;
+            margin: 8px 0;
+        }
+
+        .recipe-description {
+            font-size: 15px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            line-height: 18px;
+            color: #000000;
+            text-align: justify;
+            margin-bottom: 20px;
+            height: 131px;
+            overflow: hidden;
+        }
+
+        .recipe-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .recipe-link {
+            font-size: 15px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            line-height: 19px;
+            color: #fa0505;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .recipe-link:hover {
+            color: #d40404;
+            text-decoration: underline;
+        }
+
+        .rating-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .star {
+            width: 36px;
+            height: 34px;
+            transition: transform 0.2s ease;
+        }
+
+        .star:hover {
+            transform: scale(1.1);
+        }
+
+        .rating-image {
+            width: 16px;
+            height: 30px;
+            margin-left: 8px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .main-container {
+                width: 100%;
+                height: auto;
+                min-height: 100vh;
+            }
+
+            .recipes-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+                padding: 0 20px;
+            }
+
+            .site-title {
+                font-size: 50px;
+                line-height: 60px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .site-title {
+                font-size: 40px;
+                line-height: 50px;
+            }
+
+            .recipe-card {
+                width: 100%;
+                max-width: 350px;
+            }
+
+            .recipe-image {
+                width: 100%;
+            }
+        }
+
+        /* Animation for page load */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .recipe-card {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .recipe-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .recipe-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .recipe-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
