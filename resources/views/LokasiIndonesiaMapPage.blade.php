@@ -22,9 +22,14 @@
             
             <h1 class="page-title">Lokasi</h1>
             
-            <div class="menu-container" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Open navigation menu" onkeypress="handleMenuKeyPress(event)">
-                <img src="images/img_menu.svg" alt="Menu" class="menu-icon">
-            </div>
+            <div class="menu-wrapper">
+  <img src="{{ asset('images/img_menu.svg') }}" alt="Menu" class="menu-icon" onclick="toggleMenu()">
+  <div id="dropdownMenu" class="dropdown-menu" style="display: none;">
+    <a href="{{ route('homepage') }}">Home</a>
+    <a href="/lokasi">Peta Indonesia</a>
+    <a href="/resep">Resep Makanan</a>
+    <a href="/makanan">Makanan Daerah</a>
+  </div>
         </header>
         
         <!-- Map Pins -->
@@ -121,6 +126,6 @@
     </div>
     
     <div id="someContainer" class="popup"></div>
-    <script src="{{ asset('lokasiIndonesia.js') }}"></script>
+    <script src="{{ asset('js/lokasiIndonesia.js') }}"></script>
 </body>
 </html>

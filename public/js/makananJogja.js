@@ -15,6 +15,10 @@
                 alert('Silakan masukkan kata kunci pencarian.');
             }
         }
+        function toggleMenu() {
+    const menu = document.getElementById('dropdownMenu');
+    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+  }
 
         // Simulate search results
         function simulateSearchResults(searchTerm) {
@@ -36,8 +40,8 @@
         function pindahrestoran(){
             window.location.href = '/restoran';
         }
-        function pindahhome(){
-            window.location.href = '/home';
+        function navigateTo(id){
+            window.location.href = id;
         }
 
         // Restaurant navigation

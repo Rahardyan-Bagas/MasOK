@@ -40,6 +40,6 @@
         <a href="#">Produk</a>
         <a href="#">Kontak</a>
     </div>
-    <script src="{{ asset('tentangKami.js') }}"></script>
+    <script src="{{ asset('js/tentangKami.js') }}"></script>
 </body>
 </html>

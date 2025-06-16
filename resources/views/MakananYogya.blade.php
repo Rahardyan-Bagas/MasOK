@@ -11,19 +11,25 @@
 <body>
     <div class="main-container">
         <!-- Background Image -->
-        <img src="images/img_image_15.png" alt="Traditional Indonesian Batik Background"
+        <img src="{{ asset('images/img_image_15.png') }}" alt="Traditional Indonesian Batik Background"
             class="background-image">
 
         <!-- Logo Container -->
         <div class="logo-container">
-            <img src="images/img_screenshot20250527145618removebgpreview_1.png" onclick="pindahhome()" alt="Narad Logo"
-                class="logo-image">
+            <img src="{{ asset('images/img_screenshot20250527145618removebgpreview_1.png') }}"
+                onclick="pindahhome()" alt="Narad Logo" class="logo-image">
         </div>
 
         <!-- Top Bar: Lokasi + Menu -->
         <div class="top-bar">
             <span class="lokasi-text">Lokasi</span>
-            <img src="images/img_menu.svg" alt="Menu" class="menu-icon" onclick="toggleMobileMenu()">
+            <img src="{{ asset('images/img_menu.svg') }}" alt="Menu" class="menu-icon" onclick="toggleMenu()">
+            <div id="dropdownMenu" class="dropdown-menu" style="display: none;">
+    <a href="{{ route('homepage') }}">Home</a>
+    <a href="/lokasi">Peta Indonesia</a>
+    <a href="/resep">Resep Makanan</a>
+    <a href="/makanan">Makanan Daerah</a>
+  </div>
         </div>
 
         <!-- Page Title -->
@@ -34,57 +40,62 @@
             <!-- Search Container -->
             <div class="search-container">
                 <input type="text" class="search-input" placeholder="Cari kuliner apa?" id="searchInput">
-                <img src="images/img_search.svg" alt="Search" class="search-icon" onclick="performSearch()">
+                <img src="{{ asset('images/img_search.svg') }}" alt="Search" class="search-icon"
+                    onclick="performSearch()">
             </div>
 
-            <!-- Restaurant Cards -->
-            <div class="restaurant-card restaurant-card-1" onclick="pindahrestoran()">
-                <img src="images/img_button.png" alt="Iga BAJOG Restaurant"
-                    class="restaurant-image restaurant-image-1">
+            <!-- Restaurant Cards (Manual) -->
+           <!-- Restaurant Cards (Dari Controller Langsung) -->
+
+            <!-- Gudeg -->
+            <a href="{{ url('restoran/1') }}" class="restaurant-card">
+                <img src="{{ asset('images/img_image_16.png') }}" alt="{{ $gudeg->Nama_Makanan }}" class="restaurant-image">
                 <div class="restaurant-info">
-                    <div class="restaurant-name">Iga BAJOG (Iga Bakar Jogja)</div>
-                    <div class="restaurant-rating">4.3 <span class="star-rating">★★★★☆</span> (6,1 rb) • $$ • Daging
+                    <div class="restaurant-name">{{ $gudeg->Nama_Makanan }}</div>
+                    <div class="restaurant-details">
+                        {{ $gudeg->lokasi[0]->Nama_Tempat }} - {{ $gudeg->lokasi[0]->Alamat }}
                     </div>
-                    <div class="restaurant-details">Jl. Ring Road Utara No.1, RW.2</div>
-                    <div class="restaurant-details">Makan di tempat • Drive-through • Antar tanpa bertemu</div>
                 </div>
-            </div>
+            </a>
 
-            <div class="restaurant-card restaurant-card-2" onclick="openRestaurant('gudeg')">
-                <img src="images/img_image_16.png" alt="Gudeg Yu Djum Restaurant"
-                    class="restaurant-image restaurant-image-2">
+            <!-- Bakpia -->
+            <a href="{{ url('restoran/2') }}" class="restaurant-card">
+                <img src="{{ asset('images/image2.png') }}" alt="{{ $bakpia->Nama_Makanan }}" class="restaurant-image">
                 <div class="restaurant-info">
-                    <div class="restaurant-name">Gudeg Yu Djum Wijilan 167</div>
-                    <div class="restaurant-rating">4.5 <span class="star-rating">★★★★★</span> (605) • $$ • Jawa</div>
-                    <div class="restaurant-details">Kota Yogyakarta, Daerah Istimewa Yogyakarta</div>
-                    <div class="restaurant-details">Makan di tempat • Bawa pulang • Pesan antar</div>
+                    <div class="restaurant-name">{{ $bakpia->Nama_Makanan }}</div>
+                    <div class="restaurant-details">
+                        {{ $bakpia->lokasi[0]->Nama_Tempat }} - {{ $bakpia->lokasi[0]->Alamat }}
+                    </div>
                 </div>
-            </div>
+            </a>
 
-            <div class="restaurant-card restaurant-card-3" onclick="openRestaurant('sate')">
-                <img src="images/img_image_17.png" alt="Sate Klathak Pak Pong"
-                    class="restaurant-image restaurant-image-3">
+            <!-- Sate Klathak -->
+            <a href="{{ url('restoran/3') }}" class="restaurant-card">
+                <img src="{{ asset('images/image.png') }}" alt="{{ $sate->Nama_Makanan }}" class="restaurant-image">
                 <div class="restaurant-info">
-                    <div class="restaurant-name">Sate Klathak Pak Pong</div>
-                    <div class="restaurant-rating">4.3 <span class="star-rating">★★★★☆</span> (29 rb) • $$ • Sate</div>
-                    <div class="restaurant-details">Jl. Sultan Agung No.18</div>
-                    <div class="restaurant-details">Makan di tempat • Bawa pulang • Pesan antar</div>
+                    <div class="restaurant-name">{{ $sate->Nama_Makanan }}</div>
+                    <div class="restaurant-details">
+                        {{ $sate->lokasi[0]->Nama_Tempat }} - {{ $sate->lokasi[0]->Alamat }}
+                    </div>
                 </div>
-            </div>
+            </a>
+
+
+
         </div>
 
         <!-- Mobile Menu -->
-        <div class="mobile-menu" id="mobileMenu">
-            <div class="mobile-menu-content">
-                <span class="close-menu" onclick="toggleMobileMenu()">&times;</span>
-                <a href="#" class="mobile-menu-item" onclick="navigateTo('home')">Beranda</a>
-                <a href="#" class="mobile-menu-item" onclick="navigateTo('search')">Pencarian</a>
-                <a href="#" class="mobile-menu-item" onclick="navigateTo('favorites')">Favorit</a>
-                <a href="#" class="mobile-menu-item" onclick="navigateTo('profile')">Profil</a>
-                <a href="#" class="mobile-menu-item" onclick="navigateTo('settings')">Pengaturan</a>
-            </div>
-        </div>
+        <div class="menu-wrapper">
+  <img src="{{ asset('images/img_menu.svg') }}" alt="Menu" class="menu-icon" onclick="toggleMenu()">
+  <div id="dropdownMenu" class="dropdown-menu" style="display: none;">
+    <a href="{{ route('homepage') }}">Home</a>
+    <a href="/lokasi">Peta Indonesia</a>
+    <a href="/resep">Resep Makanan</a>
+    <a href="/makanan">Makanan Daerah</a>
+  </div>
+
     </div>
+
     <script src="{{ asset('js/makananJogja.js') }}"></script>
 </body>
 

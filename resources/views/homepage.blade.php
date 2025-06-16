@@ -79,7 +79,6 @@
         <h2 class="hero-title">Terbang Menjajaki Rasa Nusantara</h2>
         <p class="hero-subtitle">"Rasa Lokal. Cita Rasa Nusantara. Dibuat dengan bangga, disajikan dengan cinta."</p>
     </div>
-
     <script src="{{ asset('js/homepage.js') }}"></script>
 </body>
 </html>
