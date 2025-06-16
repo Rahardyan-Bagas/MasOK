@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 // routes/web.php
@@ -12,16 +13,17 @@ Route::get('/', function () {
 });
 
 Route::get('/home', function () {
-    return view('homepage'); 
-});
+    return view('homepage');
+})->name('home');
 
-Route::get('/login', function () {
-    return view('LoginPage'); // <- Tambahan ini penting
-});
 
-Route::get('/signup', function () {
-    return view('SignUpPage');
-});
+#Route::get('/login', function () {
+    #return view('LoginPage'); // <- Tambahan ini penting
+#});
+
+#Route::get('/signup', function () {
+    #return view('SignUpPage');
+#});
 
 Route::get('/lokasi', function () {
     return view('LokasiIndonesiaMapPage'); // <- Tambahan ini penting
@@ -54,3 +56,9 @@ Route::get('/reseprendang', function () {
 Route::get('/resepsate', function () {
     return view('resepSate');
 });
+
+Route::get('/signup', [AuthController::class, 'create'])->name('signup.form');
+Route::post('/signup', [AuthController::class, 'signup'])->name('signup.store');
+
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'login'])->name('login.process');

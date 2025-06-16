@@ -1,4 +1,3 @@
-<!-- resources/views/SignUpPage.blade.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Foodnesia - Login</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ asset('stylesLoginPage.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/stylesLoginPage.css') }}">
 </head>
 
 <body>
   <div class="header">
-    <img src="images/img_screenshot20250527145618removebgpreview_1.png" onclick="pindahhome()" alt="Foodnesia Logo" class="logo-image">
-    <img src="images/img_menu.svg" alt="Menu" class="menu-icon" onclick="toggleMenu()">
+    <img src="{{ asset('images/img_screenshot20250527145618removebgpreview_1.png') }}" onclick="window.location.href='/home'" alt="Foodnesia Logo" class="logo-image">
+    <img src="{{ asset('images/img_menu.svg') }}" alt="Menu" class="menu-icon" onclick="toggleMenu()">
   </div>
 
   <h1 class="brand-title">FOODNESIA</h1>
@@ -21,17 +20,21 @@
     <!-- Login Panel -->
     <div class="login-panel">
       <h2 class="login-title">LOG IN</h2>
-      <form id="loginForm" onsubmit="handleLogin(event)">
+      @if (session('success'))
+        <div class="success-message">{{ session('success') }}</div>
+      @endif
+      @if ($errors->any())
+        <div class="error-message">{{ $errors->first() }}</div>
+      @endif
+      <form id="loginForm" method="POST" action="{{ route('login.process') }}">
+        @csrf
         <div class="form-group">
-          <input type="email" class="input-field" id="email" placeholder="Email" required>
-          <div class="error-message" id="emailError">Please enter a valid email address</div>
+          <input type="email" name="Email" class="input-field" placeholder="Email" value="{{ old('Email') }}" required>
         </div>
         <div class="form-group">
-          <input type="password" class="input-field" id="password" placeholder="Password" required>
-          <div class="error-message" id="passwordError">Password must be at least 6 characters</div>
+          <input type="password" name="Password" class="input-field" placeholder="Password" required>
         </div>
-        <button type="button" class="login-button" onclick="goToHome()">LOG IN</button>
-        <div class="success-message" id="loginSuccess">Login successful! Redirecting...</div>
+        <button type="submit" class="login-button">LOG IN</button>
       </form>
     </div>
 
@@ -39,9 +42,10 @@
     <div class="welcome-panel">
       <h2 class="welcome-title">HALLO, SOBAT</h2>
       <p class="welcome-text">UNTUK TETAP TERHUBUNG DENGAN KAMI, SILAHKAN MASUK DENGAN AKUN ANDA</p>
-      <button class="signup-button" onclick="handleSignup()">SIGN UP</button>
+      <a class="signup-button" href="{{ route('signup.form') }}">SIGN UP</a>
     </div>
   </div>
-  <script src="{{ asset('login.js') }}"></script>
+
+  <script src="{{ asset('js/login.js') }}"></script>
 </body>
 </html>
