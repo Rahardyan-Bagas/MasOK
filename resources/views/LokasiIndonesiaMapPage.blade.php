@@ -121,6 +121,6 @@
     </div>
     
     <div id="someContainer" class="popup"></div>
-    <script src="{{ asset('lokasiIndonesia.js') }}"></script>
+    <script src="{{ asset('js/lokasiIndonesia.js') }}"></script>
 </body>
 </html>

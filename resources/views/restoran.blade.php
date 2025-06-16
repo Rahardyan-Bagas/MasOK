@@ -55,6 +55,6 @@
             </div>
         </div>
     </div>
-    <script src="{{ asset('restoran.js') }}"></script>
+    <script src="{{ asset('js/restoran.js') }}"></script>
 </body>
 </html>

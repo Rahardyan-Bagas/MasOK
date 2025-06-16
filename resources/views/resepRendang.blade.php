@@ -77,6 +77,6 @@ Masak terus hingga daging empuk, kering, dan bumbu meresap sempurna.</div>
             </div>
         </main>
     </div>
-    <script src="{{ asset('resepRendang.js') }}"></script>
+    <script src="{{ asset('js/resepRendang.js') }}"></script>
 </body>
 </html>

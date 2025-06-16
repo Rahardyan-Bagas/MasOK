@@ -99,6 +99,6 @@ Sajikan sate bersama sambal kacang, pelengkap, dan sambalnya.</div>
             </div>
         </div>
     </div>
-    <script src="{{ asset('resepSate.js') }}"></script>
+    <script src="{{ asset('js/resepSate.js') }}"></script>
 </body>
 </html>

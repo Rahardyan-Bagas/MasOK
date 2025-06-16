@@ -54,7 +54,6 @@
       <a class="signup-button" href="{{ route('signup.form') }}">SIGN UP</a>
     </div>
   </div>
-
   <script src="{{ asset('js/login.js') }}"></script>
 </body>
 </html>
