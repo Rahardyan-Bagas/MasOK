@@ -18,30 +18,33 @@
         }
 
         .main-container {
-            position: relative;
-            width: 1440px;
-            height: 1024px;
-            background-color: #ffffff;
-            margin: 0 auto;
-        }
+    position: relative;
+    width: 100%; /* Ubah ini dari 1440px ke 100% */
+    height: 1024px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    overflow-x: hidden; /* Tambahkan ini */
+}
 
         .background-pattern {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 1440px;
-            height: 1024px;
-            z-index: 1;
-        }
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ubah dari 1440px ke 100% */
+    height: 1024px;
+    z-index: 1;
+    object-fit: cover; /* supaya background selalu penuh */
+}
 
         .map-container {
-            position: absolute;
-            top: 276px;
-            left: 0;
-            width: 1440px;
-            height: 548px;
-            z-index: 2;
-        }
+    position: absolute;
+    top: 276px;
+    left: 0;
+    width: 100%; /* Ubah dari 1440px ke 100% */
+    height: 575px;
+    z-index: 2;
+    object-fit: contain; /* supaya map scale sesuai container */
+}
 
         .map-pin {
             position: absolute;
@@ -268,6 +271,9 @@
                 height: 28px;
             }
         }
+        .lokasi-button{
+        width: 80%;
+      }
 
         @media (max-width: 480px) {
             .page-title {
@@ -292,7 +298,7 @@
         <!-- Header -->
         <header class="header">
             <div class="logo-container">
-                <img src="images/img_screenshot20250527145618removebgpreview_1.png" alt="Company Logo" class="logo">
+                <img src="images/img_screenshot20250527145618removebgpreview_1.png" onclick="pindahhome()" alt="Company Logo" class="logo">
             </div>
             
             <h1 class="page-title">Lokasi</h1>
@@ -381,10 +387,11 @@
         <img src="images/img_map_pin.svg" alt="Location Pin" class="map-pin pin-26" onclick="showLocationInfo('Palu')" tabindex="0" role="button" aria-label="Palu location">
         <div class="tooltip">Palu</div>
         
-        <img src="images/img_map_pin.svg" alt="Location Pin" class="map-pin pin-27" onclick="showLocationInfo('Manado')" tabindex="0" role="button" aria-label="Manado location">
-        <div class="tooltip">Manado</div>
+        <img src="images/img_map_pin.svg" alt="Location Pin" class="map-pin pin-27" onclick="pindah()" tabindex="0" role="button" aria-label="Yogyakarta location">
+        <div class="tooltip">Yogyakarta</div>
     </div>
     
+    <div id="someContainer" class="popup"></div>
     <!-- Modal for location information -->
     <div id="locationModal" class="modal">
         <div class="modal-content">
@@ -394,6 +401,7 @@
         </div>
     </div>
     
+    <div id="someContainer" class="popup"></div>
     <script>
         // Location data
         const locationData = {
@@ -553,17 +561,22 @@
                 population: '400,000',
                 region: 'Central Sulawesi'
             },
-            'Manado': {
-                name: 'Manado',
-                description: 'Capital of North Sulawesi, gateway to Bunaken.',
-                population: '500,000',
-                region: 'North Sulawesi'
+            'Yogyakarta': {
+                name: 'Yogyakarta',
+                description: 'Cultural heart of Java, home to Borobudur and Prambanan.',
+                population: '400,000',
+                region: 'Special Region of Yogyakarta',
             }
         };
-        
+
+
         // Menu functionality
         function toggleMenu() {
             alert('Menu clicked! Navigation options would appear here.');
+        }
+
+        function pindah(){
+            window.location.href = '/makanan';
         }
         
         function handleMenuKeyPress(event) {
@@ -572,7 +585,9 @@
                 toggleMenu();
             }
         }
-        
+        function pindahhome(){
+            window.location.href = '/home';
+        }
         // Location pin functionality
         function showLocationInfo(locationName) {
             const location = locationData[locationName];

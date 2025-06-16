@@ -12,26 +12,32 @@
             padding: 0;
         }
 
-        body {
-            font-family: 'Inter', sans-serif;
+
+       body {
+  font-family: 'Inter', sans-serif;
             background-color: #ffffff;
             overflow-x: hidden;
-        }
+}
 
-        .main-container {
-            position: relative;
-            width: 1440px;
-            height: 1024px;
-            background-color: #ffffff;
-            margin: 0 auto;
-        }
+/* Ganti ini */
+.main-container {
+  position: relative;
+  width: 100%;            /* Dulu: width: 1440px; */
+  max-width: 100%;
+  height: auto;
+  background-color: transparent;
+  margin: 0 auto;
+}
+
 
         /* Background Images */
         .bg-image-1 {
             position: absolute;
             top: 0;
             left: 361px;
-            width: 363px;
+
+            width: 25%;
+
             height: 172px;
             z-index: 1;
         }
@@ -40,7 +46,8 @@
             position: absolute;
             top: 278px;
             left: 0;
-            width: 1440px;
+            width: 100%;
+
             height: 746px;
             z-index: 2;
         }
@@ -49,7 +56,9 @@
             position: absolute;
             top: 392px;
             left: 0;
-            width: 1440px;
+
+            width: 100%;
+
             height: 518px;
             z-index: 3;
         }
@@ -58,7 +67,8 @@
             position: absolute;
             top: 0;
             left: 724px;
-            width: 357px;
+            width: 25%;
+
             height: 172px;
             z-index: 4;
         }
@@ -67,7 +77,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 361px;
+            width: 25%;
             height: 172px;
             z-index: 5;
         }
@@ -76,7 +86,9 @@
             position: absolute;
             top: 0;
             left: 1081px;
-            width: 359px;
+
+            width: 30%;
+
             height: 172px;
             z-index: 6;
         }
@@ -86,7 +98,8 @@
             position: absolute;
             top: 171px;
             left: 0;
-            width: 1440px;
+            width: 100%;
+
             height: 106px;
             background-color: #fa0505;
             z-index: 10;
@@ -372,7 +385,8 @@
         <img src="images/img_b707612e60454c568b29bc4e095a5c54_1.png" alt="Indonesian Food Background 3" class="bg-image-3">
         <img src="images/img_image.png" alt="Indonesian Food Background 4" class="bg-image-4">
         <img src="images/img_image_2.png" alt="Indonesian Food Background 5" class="bg-image-5">
-        <img src="images/img_image_172x359.png" alt="Indonesian Food Background 6" class="bg-image-6">
+        <img src="images/taliwang.png" alt="Indonesian Food Background 6" class="bg-image-6">
+
 
         <!-- Navigation Bar -->
         <nav class="navbar">
@@ -388,11 +402,11 @@
                     <a href="#menu" class="nav-text">Menu</a>
                     <img src="images/img_icon.svg" alt="Menu Icon" class="nav-icon">
                     <div class="dropdown-content">
-                        <a href="#makanan-utama">Makanan Utama</a>
-                        <a href="#makanan-ringan">Makanan Ringan</a>
-                        <a href="#minuman">Minuman</a>
-                        <a href="#dessert">Dessert</a>
-                        <a href="#makanan-tradisional">Makanan Tradisional</a>
+
+                        <a href="/lokasi">Peta Indonesia</a>
+                        <a href="/resep">Resep Makanan</a>
+                        <a href="/makanan">Makanan Daerah</a>
+
                     </div>
                 </div>
 
@@ -407,7 +421,8 @@
                 </div>
 
                 <div class="nav-item">
-                    <a href="#tentang-kami" class="nav-text">Tentang Kami</a>
+                    <a href="#tentang" onclick="pindahtentang()" class="nav-text">Tentang Kami</a>
+
                 </div>
             </div>
 
@@ -494,11 +509,13 @@
             // Here you would typically implement actual language switching
             console.log('Language changed to:', lang);
         }
-
+        function pindahtentang(){
+            window.location.href = '/tentang';
+        }
         // Login modal functionality
         function showLogin() {
-            document.getElementById('loginModal').style.display = 'flex';
-            document.body.style.overflow = 'hidden';
+        window.location.href = '/login'; // arahkan ke route Laravel
+
         }
 
         function closeLogin() {

@@ -173,7 +173,7 @@
     <div class="main-container">
         <div class="header">
             <div class="logo-container">
-                <img src="images/img_screenshot20250527145618removebgpreview_1.png" alt="Logo">
+                <img src="images/img_screenshot20250527145618removebgpreview_1.png" onclick="pindahhome()" alt="Logo">
             </div>
             <button class="menu-button" onclick="toggleMobileMenu()">
                 <img src="images/img_menu.svg" class="menu-icon" alt="Menu">
@@ -225,6 +225,10 @@
                 document.getElementById('contentText').innerHTML = contentData[index].content;
                 currentPage = index;
             }
+        }
+
+        function pindahhome(){
+            window.location.href = '/home';
         }
 
         function toggleMobileMenu() {

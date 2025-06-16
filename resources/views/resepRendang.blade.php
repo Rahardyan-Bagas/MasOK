@@ -381,7 +381,8 @@
             <h2 class="recipe-title">Rendang</h2>
             
             <!-- Food Image -->
-            <img src="images/img_image.png" alt="Delicious Traditional Indonesian Rendang" class="food-image">
+            <img src="images/img_image_2.png" alt="Delicious Traditional Indonesian Rendang" class="food-image">
+
             
             <!-- Ingredients Section -->
             <h3 class="ingredients-title">Bahan - bahan :</h3>

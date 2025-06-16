@@ -1,3 +1,4 @@
+<!-- resources/views/SignUpPage.blade.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +21,7 @@
       background-position: center;
       min-height: 100vh;
       overflow-x: hidden;
+      padding-bottom: 40px;
     }
 
     .header {
@@ -44,18 +46,19 @@
       font-size: 48px;
       font-weight: 700;
       margin-top: 10px;
+      color: #000;
     }
 
     .auth-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      background-color: white;
+      background-color: #ffffffcc;
       max-width: 1000px;
       margin: 40px auto;
       border-radius: 30px;
       overflow: hidden;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
     }
 
     .login-panel {
@@ -83,18 +86,19 @@
       border-radius: 20px;
       font-family: 'Cinzel', serif;
       font-weight: 600;
+      background-color: #fff;
     }
 
     .input-field:focus {
       outline: none;
       border-color: #fa0505;
-      box-shadow: 0 0 5px rgba(250, 5, 5, 0.3);
+      box-shadow: 0 0 8px rgba(250, 5, 5, 0.3);
     }
 
-    .login-button {
+    .login-button, .signup-button {
       width: 60%;
       padding: 12px;
-      margin-top: 30px;
+      margin-top: 20px;
       font-size: 20px;
       font-weight: bold;
       border: none;
@@ -102,16 +106,18 @@
       background-color: #fa0505;
       color: white;
       cursor: pointer;
-      transition: 0.3s;
+      transition: background 0.3s, transform 0.2s;
     }
 
-    .login-button:hover {
+    .login-button:hover, .signup-button:hover {
       background-color: #e00404;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(250, 5, 5, 0.3);
     }
 
     .welcome-panel {
       flex: 1 1 50%;
-      background-color: #d9d9d9;
+      background-color: #f2f2f2;
       padding: 40px;
       text-align: center;
     }
@@ -124,24 +130,7 @@
     .welcome-text {
       font-size: 18px;
       line-height: 1.6;
-      margin-bottom: 40px;
-    }
-
-    .signup-button {
-      width: 60%;
-      padding: 12px;
-      font-size: 20px;
-      font-weight: bold;
-      border: none;
-      border-radius: 28px;
-      background-color: #fa0505;
-      color: white;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .signup-button:hover {
-      background-color: #e00404;
+      margin-bottom: 30px;
     }
 
     .error-message {
@@ -191,7 +180,7 @@
 
 <body>
   <div class="header">
-    <img src="images/img_screenshot20250527145618removebgpreview_1.png" alt="Foodnesia Logo" class="logo-image">
+    <img src="images/img_screenshot20250527145618removebgpreview_1.png" onclick="pindahhome()" alt="Foodnesia Logo" class="logo-image">
     <img src="images/img_menu.svg" alt="Menu" class="menu-icon" onclick="toggleMenu()">
   </div>
 
@@ -210,7 +199,7 @@
           <input type="password" class="input-field" id="password" placeholder="Password" required>
           <div class="error-message" id="passwordError">Password must be at least 6 characters</div>
         </div>
-        <button type="submit" class="login-button">LOG IN</button>
+        <button type="button" class="login-button" onclick="goToHome()">LOG IN</button>
         <div class="success-message" id="loginSuccess">Login successful! Redirecting...</div>
       </form>
     </div>
@@ -262,9 +251,13 @@
     }
 
     function handleSignup() {
-      alert('Redirecting to sign up page...');
+      window.location.href = '/signup';
     }
 
+    function pindahhome(){
+            window.location.href = '/home';
+        }
+        
     document.querySelectorAll('.input-field').forEach(input => {
       input.addEventListener('focus', function () {
         this.style.transform = 'scale(1.02)';
@@ -273,6 +266,10 @@
         this.style.transform = 'scale(1)';
       });
     });
+
+    function goToHome() {
+    window.location.href = '/home'; // sesuaikan dengan route Laravel kamu
+    }
 
     function addLoadingState(button, originalText) {
       button.disabled = true;

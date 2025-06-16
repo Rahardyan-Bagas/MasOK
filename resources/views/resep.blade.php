@@ -280,7 +280,8 @@
         <!-- Header -->
         <header class="header">
             <div class="logo-container">
-                <img src="images/img_screenshot20250527145618removebgpreview_1.png" alt="Narad Logo" class="logo">
+                <img src="images/img_screenshot20250527145618removebgpreview_1.png" onclick="pindahhome()" alt="Narad Logo" class="logo">
+
             </div>
             
             <h1 class="site-title">Resep</h1>
@@ -301,8 +302,10 @@
                     <p class="recipe-description">
                         Gudeg adalah makanan khas Yogyakarta yang terbuat dari nangka muda yang dimasak dengan santan dan bumbu-bumbu hingga berwarna cokelat dan beraroma khas. Rasanya manis dan gurih, biasanya disajikan dengan nasi, ayam opor, telur, tahu/tempe bacem, dan sambal krecek.
                     </p>
+                    <button onclick="pindahresepgudeg()"></button>
                     <div class="recipe-footer">
-                        <a href="#" class="recipe-link" onclick="event.stopPropagation(); viewFullRecipe('gudeg')">Resep Lengkap</a>
+                        <a href="#" class="recipe-link" onclick="pindahresepgudeg()">Resep Lengkap</a>
+
                         <div class="rating-container">
                             <img src="images/img_starfilled.svg" alt="Star" class="star">
                             <img src="images/img_starfilled.svg" alt="Star" class="star">
@@ -324,7 +327,8 @@
                         Rendang adalah masakan khas Minangkabau yang terbuat dari daging sapi yang dimasak lama dengan santan dan rempah-rempah. Rasanya kaya, gurih, dan pedas, dengan tekstur daging yang empuk dan bumbu meresap. Rendang dikenal sebagai salah satu makanan terenak di dunia.
                     </p>
                     <div class="recipe-footer">
-                        <a href="#" class="recipe-link" onclick="event.stopPropagation(); viewFullRecipe('rendang')">Resep Lengkap</a>
+                        <a href="#" class="recipe-link" onclick="pindahreseprendang()">Resep Lengkap</a>
+
                         <div class="rating-container">
                             <img src="images/img_starfilled.svg" alt="Star" class="star">
                             <img src="images/img_starfilled.svg" alt="Star" class="star">
@@ -346,7 +350,8 @@
                         Sate adalah makanan khas Indonesia berupa potongan daging yang ditusuk, dibakar, dan disajikan dengan bumbu kacang atau kecap. Daging yang digunakan bisa ayam, kambing, sapi, atau lainnya. Rasanya gurih, manis, dan sedikit smokey.
                     </p>
                     <div class="recipe-footer">
-                        <a href="#" class="recipe-link" onclick="event.stopPropagation(); viewFullRecipe('sate')">Resep Lengkap</a>
+                        <a href="#" class="recipe-link" onclick="pindahresepsate()">Resep Lengkap</a>
+
                         <div class="rating-container">
                             <img src="images/img_starfilled.svg" alt="Star" class="star">
                             <img src="images/img_starfilled.svg" alt="Star" class="star">
@@ -361,6 +366,19 @@
     </div>
 
     <script>
+
+        function pindahresepgudeg(){
+            window.location.href = '/resepgudeg';
+        }
+        function pindahreseprendang(){
+            window.location.href = '/reseprendang';
+        }
+        function pindahresepsate(){
+            window.location.href = '/resepsate';
+        }
+        function pindahhome(){
+            window.location.href = '/home';
+        }
         // Menu toggle functionality
         function toggleMenu() {
             alert('Menu clicked! Navigation menu would open here.');
@@ -410,7 +428,6 @@
                 console.log('Recipe data loaded');
             }, 500);
         });
-
         // Add scroll effects for better UX
         window.addEventListener('scroll', function() {
             const cards = document.querySelectorAll('.recipe-card');

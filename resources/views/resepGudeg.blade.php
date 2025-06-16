@@ -21,7 +21,7 @@
             position: relative;
             width: 1440px;
             height: 1024px;
-            background-color: #ffffff;
+            background-color:rgb(255, 255, 255);
             margin: 0 auto;
         }
 
@@ -98,7 +98,8 @@
             left: 77px;
             width: 1296px;
             height: 730px;
-            background-color: #ffffff;
+            background-color:rgb(255, 255, 255);
+
             border-radius: 15px;
             z-index: 5;
             padding: 36px;
@@ -381,7 +382,8 @@
             <h2 class="recipe-title">Gudeg</h2>
             
             <!-- Food Image -->
-            <img src="images/gudeg.png" alt="Delicious Traditional Indonesian Rendang" class="food-image">
+            <img src="images/img_image.png" alt="Delicious Traditional Indonesian Rendang" class="food-image">
+
             
             <!-- Ingredients Section -->
             <h3 class="ingredients-title">Bahan - bahan :</h3>
