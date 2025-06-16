@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foodnesia - Terbang Menjajaki Rasa Nusantara</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400&family=Roboto:wght@400&display=swap" rel="stylesheet">
+<<<<<<< HEAD
+    <link rel="stylesheet" href="{{ asset('stylesHomepage.css') }}">
+=======
     <style>
         * {
             box-sizing: border-box;
@@ -376,6 +379,7 @@
             animation: fadeInUp 1s ease-out;
         }
     </style>
+>>>>>>> 113711e3aaf408162a5b4e4e19f89a870a8513da
 </head>
 <body>
     <div class="main-container">
@@ -461,6 +465,9 @@
             </form>
         </div>
     </div>
+<<<<<<< HEAD
+    <script src="{{ asset('homepage.js') }}"></script>
+=======
 
     <script>
         // Search functionality
@@ -619,5 +626,6 @@
             }, 500);
         });
     </script>
+>>>>>>> 113711e3aaf408162a5b4e4e19f89a870a8513da
 </body>
 </html>
