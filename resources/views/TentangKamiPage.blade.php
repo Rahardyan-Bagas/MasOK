@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tentang Kami</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('stylesTentangKami.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/stylesTentangKami.css') }}">
 </head>
 <body>
     <div class="main-container">

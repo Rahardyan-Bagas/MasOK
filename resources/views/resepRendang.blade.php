@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rendang Recipe - Traditional Indonesian Cuisine</title>
-    <link rel="stylesheet" href="{{ asset('stylesResepRendang.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/stylesResepRendang.css') }}">
 </head>
 <body>
     <div class="main-container">

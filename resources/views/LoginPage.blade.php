@@ -11,7 +11,16 @@
 <body>
   <div class="header">
     <img src="{{ asset('images/img_screenshot20250527145618removebgpreview_1.png') }}" onclick="window.location.href='/home'" alt="Foodnesia Logo" class="logo-image">
-    <img src="{{ asset('images/img_menu.svg') }}" alt="Menu" class="menu-icon" onclick="toggleMenu()">
+    
+    <div class="menu-wrapper">
+  <img src="{{ asset('images/img_menu.svg') }}" alt="Menu" class="menu-icon" onclick="toggleMenu()">
+  <div id="dropdownMenu" class="dropdown-menu" style="display: none;">
+    <a href="{{ route('homepage') }}">Home</a>
+    <a href="/lokasi">Peta Indonesia</a>
+    <a href="/resep">Resep Makanan</a>
+    <a href="/makanan">Makanan Daerah</a>
+  </div>
+</div>
   </div>
 
   <h1 class="brand-title">FOODNESIA</h1>

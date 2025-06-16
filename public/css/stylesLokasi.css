@@ -96,7 +96,7 @@
         }
 
         .logo-container {
-            background-color: #ffffff;
+            background-color: transparent;
             width: 77px;
             height: 107px;
             padding: 5px;
@@ -122,7 +122,7 @@
         }
 
         .menu-container {
-            background-color: #ffffff;
+            background-color: transparent;
             width: 66px;
             height: 64px;
             border-radius: 8px;
