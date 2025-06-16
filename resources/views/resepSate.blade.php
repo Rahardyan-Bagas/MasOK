@@ -32,6 +32,7 @@
             
             <!-- Recipe Image -->
             <img src="images/img_image_1.png" alt="Sate Dish" class="recipe-image">
+
             
             <!-- Ingredients Section -->
             <div class="ingredients-section">
