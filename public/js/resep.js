@@ -10,11 +10,19 @@
         function pindahhome(){
             window.location.href = '/home';
         }
-        // Menu toggle functionality
         function toggleMenu() {
-            alert('Menu clicked! Navigation menu would open here.');
-            console.log('Menu toggle activated');
-        }
+    const menu = document.getElementById('dropdownMenu');
+    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+  }
+
+  // Optional: Tutup menu saat klik di luar
+  document.addEventListener('click', function(event) {
+    const menu = document.getElementById('dropdownMenu');
+    const icon = document.querySelector('.menu-icon');
+    if (!menu.contains(event.target) && !icon.contains(event.target)) {
+      menu.style.display = 'none';
+    }
+  });
 
         // Recipe card click functionality
         function openRecipe(recipeName) {

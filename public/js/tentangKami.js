@@ -25,7 +25,14 @@
             window.location.href = '/home';
         }
 
-        function toggleMobileMenu() {
-            document.getElementById('mobileMenu').classList.toggle('open');
-            document.querySelector('.overlay').classList.toggle('active');
-        }
+        function toggleMenu() {
+    const menu = document.getElementById('dropdownMenu');
+    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+    }
+
+    document.querySelector('.menu-container').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleMenu();
+      }
+    });

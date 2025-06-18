@@ -26,9 +26,6 @@ window.addEventListener('DOMContentLoaded', function () {
 });
 
 // Menu toggle
-function toggleMenu() {
-  alert('Menu clicked! Navigation menu would open here.');
-}
 
 function pindahhome(){
     window.location.href='';

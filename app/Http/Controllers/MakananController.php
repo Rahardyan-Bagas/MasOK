@@ -8,9 +8,18 @@ class MakananController extends Controller
 {
     public function makananJogjaManual()
     {
-        $gudeg = Makanan::where('Nama_Makanan', 'Gudeg')->with('lokasi')->first();
-        $bakpia = Makanan::where('Nama_Makanan', 'Bakpia')->with('lokasi')->first();
-        $sate = Makanan::where('Nama_Makanan', 'Sate Klathak')->with('lokasi')->first();
+        // Ambil data berdasarkan ID, asumsi:
+        // Id_Makanan 1 = Gudeg
+        // Id_Makanan 2 = Bakpia
+        // Id_Makanan 3 = Sate Klathak
+        $gudeg = Makanan::with('lokasi')->find(1);
+        $bakpia = Makanan::with('lokasi')->find(2);
+        $sate = Makanan::with('lokasi')->find(3);
+
+        // Cek jika salah satu tidak ditemukan
+        if (!$gudeg || !$bakpia || !$sate) {
+            abort(404, "Salah satu data makanan tidak ditemukan.");
+        }
 
         return view('makananYogya', compact('gudeg', 'bakpia', 'sate'));
     }

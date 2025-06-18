@@ -17,7 +17,9 @@
         <!-- Header -->
         <header class="header">
             <div class="logo-container">
-                <img src="images/img_screenshot20250527145618removebgpreview_1.png" href="{{ route('homepage') }}" alt="Company Logo" class="logo">
+                <a href="{{ route('homepage') }}">
+                    <img src="{{ asset('images/img_screenshot20250527145618removebgpreview_1.png') }}" alt="Foodnesia Logo" class="logo-image">
+                </a>
             </div>
             
             <h1 class="page-title">Lokasi</h1>

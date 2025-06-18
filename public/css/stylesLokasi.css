@@ -104,6 +104,10 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
+        .logo-image {
+      height: 80px;
+    }
+    
         .logo {
             width: 72px;
             height: 102px;

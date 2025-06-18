@@ -31,7 +31,7 @@ class LokasiSeeder extends Seeder
         ]);
 
         Lokasi::create([
-            'Nama_Tempat' => 'Mangut Lele Mbah Marto',
+           'Nama_Tempat' => 'Mangut Lele Mbah Marto',
             'Kota' => 'Bantul',
             'Provinsi' => 'DI Yogyakarta',
             'Alamat' => 'Dusun Nengahan, Sewon'
@@ -39,8 +39,8 @@ class LokasiSeeder extends Seeder
 
         Lokasi::create([
             'Nama_Tempat' => 'House of Raminten',
-            'Kota' => 'Yogyakarta',
-            'Provinsi' => 'DI Yogyakarta',
+           'Kota' => 'Yogyakarta',
+           'Provinsi' => 'DI Yogyakarta',
             'Alamat' => 'Jl. Faridan M Noto No.7'
         ]);
 

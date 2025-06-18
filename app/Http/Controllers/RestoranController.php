@@ -12,7 +12,7 @@ class RestoranController extends Controller
             1 => [
                 'Nama_Restoran' => 'Iga Bajog',
                 'Gambar' => 'img_image_16.png',
-                'Rating' => 4.3,
+                'Rating' => 4,0,
                 'Deskripsi' => 'Iga Bajog adalah tempat makan terkenal di Yogyakarta dengan olahan iga sapi yang lezat dan empuk, disiram dengan sambal kecap. Iga Bajog juga dikenal karena buka 24 jam non-stop, sehingga menjadi tempat makan yang nyaman untuk dinikmati kapan saja.',
                 'rekomendasi' => ['Iga Bakar Jogja', 'Sate Koyor', 'Sop Iga'],
             ],

@@ -3,18 +3,17 @@
         }
 
         function toggleMenu() {
-            // Simulate menu toggle functionality
-            const menuContainer = document.querySelector('.menu-container');
-            
-            // Add visual feedback
-            menuContainer.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                menuContainer.style.transform = 'scale(1)';
-            }, 150);
-            
-            // Simulate menu opening (you can replace this with actual menu logic)
-            alert('Menu clicked! Navigation options would appear here.');
-        }
+    const menu = document.getElementById('dropdownMenu');
+    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+  }
+
+  document.addEventListener('click', function(event) {
+    const menu = document.getElementById('dropdownMenu');
+    const icon = document.querySelector('.menu-icon');
+    if (!menu.contains(event.target) && !icon.contains(event.target)) {
+      menu.style.display = 'none';
+    }
+  })
 
         // Add smooth scrolling for mobile
         document.addEventListener('DOMContentLoaded', function() {

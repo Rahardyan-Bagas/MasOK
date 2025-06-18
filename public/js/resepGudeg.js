@@ -1,10 +1,18 @@
         let currentRating = 0;
         
-        // Menu toggle functionality
         function toggleMenu() {
-            alert('Menu clicked! Navigation functionality would be implemented here.');
-            console.log('Menu toggle activated');
-        }
+    const menu = document.getElementById('dropdownMenu');
+    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+  }
+
+  // Optional: Tutup menu saat klik di luar
+  document.addEventListener('click', function(event) {
+    const menu = document.getElementById('dropdownMenu');
+    const icon = document.querySelector('.menu-icon');
+    if (!menu.contains(event.target) && !icon.contains(event.target)) {
+      menu.style.display = 'none';
+    }
+  });
         
         // Star rating functionality
         function setRating(rating) {

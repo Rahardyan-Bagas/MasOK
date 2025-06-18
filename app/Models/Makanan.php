@@ -6,10 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Makanan extends Model
 {
-    
     protected $table = 'makanan';
     protected $primaryKey = 'Id_Makanan';
     public $timestamps = false;
+
+    public function resep()
+    {
+        return $this->hasOne(Resep::class, 'Id_Makanan');
+    }
 
     public function daerah()
     {

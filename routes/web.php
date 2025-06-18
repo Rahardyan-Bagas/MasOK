@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MakananController;
 use App\Http\Controllers\RestoranController;
+use App\Http\Controllers\ResepController;
 
 
 Route::get('/', function () {
@@ -20,9 +21,6 @@ Route::get('/lokasi', function () {
     return view('LokasiIndonesiaMapPage'); // <- Tambahan ini penting
 });
 
-Route::get('/resep', function () {
-    return view('resep'); // <- Tambahan ini penting
-});
 
 Route::get('/restoran', function () {
     return view('restoran');
@@ -57,3 +55,8 @@ Route::post('/logout', [HomeController::class, 'logout'])->name('logout');
 Route::get('/makanan', [MakananController::class, 'makananJogjaManual']);
 
 Route::get('/restoran/{id}', [RestoranController::class, 'show']);
+
+
+Route::get('/resep', [ResepController::class, 'index']);
+Route::get('/resep/{id}', [ResepController::class, 'show']);
+

@@ -16,8 +16,9 @@
 
         <!-- Logo Container -->
         <div class="logo-container">
-            <img src="{{ asset('images/img_screenshot20250527145618removebgpreview_1.png') }}"
-                onclick="pindahhome()" alt="Narad Logo" class="logo-image">
+            <a href="{{ route('homepage') }}">
+                    <img src="{{ asset('images/img_screenshot20250527145618removebgpreview_1.png') }}" alt="Foodnesia Logo" class="logo-image">
+                </a>
         </div>
 
         <!-- Top Bar: Lokasi + Menu -->
@@ -79,21 +80,7 @@
                     </div>
                 </div>
             </a>
-
-
-
         </div>
-
-        <!-- Mobile Menu -->
-        <div class="menu-wrapper">
-  <img src="{{ asset('images/img_menu.svg') }}" alt="Menu" class="menu-icon" onclick="toggleMenu()">
-  <div id="dropdownMenu" class="dropdown-menu" style="display: none;">
-    <a href="{{ route('homepage') }}">Home</a>
-    <a href="/lokasi">Peta Indonesia</a>
-    <a href="/resep">Resep Makanan</a>
-    <a href="/makanan">Makanan Daerah</a>
-  </div>
-
     </div>
 
     <script src="{{ asset('js/makananJogja.js') }}"></script>

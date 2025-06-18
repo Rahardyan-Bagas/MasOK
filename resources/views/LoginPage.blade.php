@@ -10,7 +10,10 @@
 
 <body>
   <div class="header">
-    <img src="{{ asset('images/img_screenshot20250527145618removebgpreview_1.png') }}" onclick="window.location.href='/home'" alt="Foodnesia Logo" class="logo-image">
+    <a href="{{ route('homepage') }}">
+    <img src="{{ asset('images/img_screenshot20250527145618removebgpreview_1.png') }}" alt="Foodnesia Logo" class="logo-image">
+</a>
+
     
     <div class="menu-wrapper">
   <img src="{{ asset('images/img_menu.svg') }}" alt="Menu" class="menu-icon" onclick="toggleMenu()">
