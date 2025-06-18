@@ -7,7 +7,7 @@
     body {
       font-family: 'Cinzel', serif;
       background-color: #ffffff;
-      background-image: url("images/img_image_15.png");
+      background-image: url("/images/img_image_15.png");
       background-size: cover;
       background-position: center;
       min-height: 100vh;
@@ -40,6 +40,40 @@
       width: 24px;
       height: 24px;
     }
+
+    .menu-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  z-index: 999;
+  min-width: 160px;
+  font-family: 'Inter', sans-serif;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 16px;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f5f5f5;
+}
 
     .brand-title {
       text-align: center;

@@ -173,6 +173,10 @@
         function pindah(){
             window.location.href = '/makanan';
         }
+        function toggleMenu() {
+        const menu = document.getElementById('dropdownMenu');
+        menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        }
         
         function handleMenuKeyPress(event) {
             if (event.key === 'Enter' || event.key === ' ') {

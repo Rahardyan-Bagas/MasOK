@@ -15,6 +15,18 @@
                 alert('Silakan masukkan kata kunci pencarian.');
             }
         }
+        function toggleMenu() {
+    const menu = document.getElementById('dropdownMenu');
+    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+  }
+  
+  document.addEventListener('click', function(event) {
+    const menu = document.getElementById('dropdownMenu');
+    const icon = document.querySelector('.menu-icon');
+    if (!menu.contains(event.target) && !icon.contains(event.target)) {
+      menu.style.display = 'none';
+    }
+  })
 
         // Simulate search results
         function simulateSearchResults(searchTerm) {
@@ -36,8 +48,8 @@
         function pindahrestoran(){
             window.location.href = '/restoran';
         }
-        function pindahhome(){
-            window.location.href = '/home';
+        function navigateTo(id){
+            window.location.href = id;
         }
 
         // Restaurant navigation

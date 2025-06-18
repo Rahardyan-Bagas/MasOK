@@ -17,14 +17,21 @@
         <!-- Header -->
         <header class="header">
             <div class="logo-container">
-                <img src="images/img_screenshot20250527145618removebgpreview_1.png" href="{{ route('homepage') }}" alt="Company Logo" class="logo">
+                <a href="{{ route('homepage') }}">
+                    <img src="{{ asset('images/img_screenshot20250527145618removebgpreview_1.png') }}" alt="Foodnesia Logo" class="logo-image">
+                </a>
             </div>
             
             <h1 class="page-title">Lokasi</h1>
             
-            <div class="menu-container" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Open navigation menu" onkeypress="handleMenuKeyPress(event)">
-                <img src="images/img_menu.svg" alt="Menu" class="menu-icon">
-            </div>
+            <div class="menu-wrapper">
+  <img src="{{ asset('images/img_menu.svg') }}" alt="Menu" class="menu-icon" onclick="toggleMenu()">
+  <div id="dropdownMenu" class="dropdown-menu" style="display: none;">
+    <a href="{{ route('homepage') }}">Home</a>
+    <a href="/lokasi">Peta Indonesia</a>
+    <a href="/resep">Resep Makanan</a>
+    <a href="/makanan">Makanan Daerah</a>
+  </div>
         </header>
         
         <!-- Map Pins -->

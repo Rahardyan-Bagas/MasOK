@@ -34,6 +34,7 @@ return new class extends Migration
             $table->id('Id_Makanan');
             $table->string('Nama_Makanan', 100);
             $table->text('Deskripsi')->nullable();
+            $table->string('Gambar')->nullable();
             $table->unsignedBigInteger('Id_Daerah')->nullable();
             $table->foreign('Id_Daerah')->references('Id_Daerah')->on('daerah')->onDelete('set null');
             $table->timestamps();
@@ -45,7 +46,6 @@ return new class extends Migration
             $table->unsignedBigInteger('Id_Makanan');
             $table->text('Bahan');
             $table->text('Cara_Memasak');
-            $table->string('Waktu_Memasak', 50)->nullable();
             $table->foreign('Id_Makanan')->references('Id_Makanan')->on('makanan')->onDelete('cascade');
             $table->timestamps();
         });
@@ -73,7 +73,6 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        // Tabel Makanan_Lokasi (N:N)
         Schema::create('makanan_lokasi', function (Blueprint $table) {
             $table->unsignedBigInteger('Id_Makanan');
             $table->unsignedBigInteger('Id_Lokasi');

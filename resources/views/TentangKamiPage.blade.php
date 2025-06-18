@@ -11,11 +11,19 @@
     <div class="main-container">
         <div class="header">
             <div class="logo-container">
-                <img src="images/img_screenshot20250527145618removebgpreview_1.png" onclick="pindahhome()" alt="Logo">
+                <a href="{{ route('homepage') }}">
+                    <img src="{{ asset('images/img_screenshot20250527145618removebgpreview_1.png') }}" alt="Foodnesia Logo" class="logo-image">
+                </a>
             </div>
-            <button class="menu-button" onclick="toggleMobileMenu()">
-                <img src="images/img_menu.svg" class="menu-icon" alt="Menu">
-            </button>
+            <div class="menu-container" onclick="toggleMenu()" role="button" tabindex="0">
+      <img src="{{ asset('images/img_menu.svg') }}" alt="Menu" class="menu-icon">
+      <div id="dropdownMenu" class="dropdown-menu" style="display: none;">
+            <a href="{{ route('homepage') }}">Home</a>
+            <a href="/lokasi">Peta Indonesia</a>
+            <a href="/resep">Resep Makanan</a>
+            <a href="/makanan">Makanan Daerah</a>
+      </div>
+    </div>
         </div>
 
         <h1 class="page-title" id="pageTitle">Tentang Kami</h1>
@@ -31,6 +39,7 @@
             <button class="pagination-dot" onclick="changePage(1)"></button>
         </div>
     </div>
+
 
     <div class="overlay" onclick="toggleMobileMenu()"></div>
     <div class="mobile-menu" id="mobileMenu">
