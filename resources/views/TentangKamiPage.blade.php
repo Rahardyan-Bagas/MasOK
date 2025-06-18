@@ -39,6 +39,16 @@
             <button class="pagination-dot" onclick="changePage(1)"></button>
         </div>
     </div>
+
+
+    <div class="overlay" onclick="toggleMobileMenu()"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#">Beranda</a>
+        <a href="#">Tentang Kami</a>
+        <a href="#">Layanan</a>
+        <a href="#">Produk</a>
+        <a href="#">Kontak</a>
+    </div>
     <script src="{{ asset('js/tentangKami.js') }}"></script>
 </body>
 </html>
