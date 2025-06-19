@@ -22,6 +22,7 @@
             <!-- Search -->
             <div class="search-container">
                 <input type="text" class="search-input" placeholder="Cari kuliner apa?" id="searchInput">
+                <div id="searchSuggestions" class="suggestions-box"></div>
                 <img src="images/img_search.svg" class="search-icon" onclick="performSearch()">
             </div>
 

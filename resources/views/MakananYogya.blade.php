@@ -52,7 +52,7 @@
             <a href="{{ url('restoran/1') }}" class="restaurant-card">
                 <img src="{{ asset('images/img_image_16.png') }}" alt="{{ $gudeg->Nama_Makanan }}" class="restaurant-image">
                 <div class="restaurant-info">
-                    <div class="restaurant-name">{{ $gudeg->Nama_Makanan }}</div>
+                    <div class="restaurant-name">Gudeg Yu Djum</div>
                     <div class="restaurant-details">
                         {{ $gudeg->lokasi[0]->Nama_Tempat }} - {{ $gudeg->lokasi[0]->Alamat }}
                     </div>
@@ -63,9 +63,9 @@
             <a href="{{ url('restoran/2') }}" class="restaurant-card">
                 <img src="{{ asset('images/image2.png') }}" alt="{{ $bakpia->Nama_Makanan }}" class="restaurant-image">
                 <div class="restaurant-info">
-                    <div class="restaurant-name">{{ $bakpia->Nama_Makanan }}</div>
+                    <div class="restaurant-name">Bakpia Pathok 25</div>
                     <div class="restaurant-details">
-                        {{ $bakpia->lokasi[0]->Nama_Tempat }} - {{ $bakpia->lokasi[0]->Alamat }}
+                        {{ $sate->lokasi[0]->Nama_Tempat }} - {{ $sate->lokasi[0]->Alamat }}
                     </div>
                 </div>
             </a>
@@ -74,9 +74,9 @@
             <a href="{{ url('restoran/3') }}" class="restaurant-card">
                 <img src="{{ asset('images/image.png') }}" alt="{{ $sate->Nama_Makanan }}" class="restaurant-image">
                 <div class="restaurant-info">
-                    <div class="restaurant-name">{{ $sate->Nama_Makanan }}</div>
+                    <div class="restaurant-name">Sate Klatak</div>
                     <div class="restaurant-details">
-                        {{ $sate->lokasi[0]->Nama_Tempat }} - {{ $sate->lokasi[0]->Alamat }}
+                        {{ $bakpia->lokasi[0]->Nama_Tempat }} - {{ $bakpia->lokasi[0]->Alamat }}
                     </div>
                 </div>
             </a>

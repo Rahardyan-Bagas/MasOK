@@ -24,5 +24,11 @@ class Makanan extends Model
     {
         return $this->belongsToMany(Lokasi::class, 'makanan_lokasi', 'Id_Makanan', 'Id_Lokasi');
     }
+
+    public function restoran()
+{
+    return $this->hasOne(Restoran::class, 'makanan_id');
+}
+
 }
 

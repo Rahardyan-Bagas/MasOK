@@ -33,25 +33,31 @@
 
         <!-- Recipe Content -->
         <main class="recipe-container">
-            <h2 class="recipe-title">{{ $makanan->Nama_Makanan }}</h2>
-            <img src="{{ asset('images/' . $makanan->Gambar) }}" alt="{{ $makanan->Nama_Makanan }}" class="food-image">
+    <h2 class="recipe-title">{{ $makanan->Nama_Makanan }}</h2>
 
+    <div class="recipe-layout">
+        <img src="{{ asset('images/' . $makanan->Gambar) }}" alt="{{ $makanan->Nama_Makanan }}" class="food-image">
+
+        <div class="recipe-text">
             <h3 class="ingredients-title">Bahan - bahan :</h3>
             <div class="ingredients-list">{{ $resep->Bahan }}</div>
 
             <h3 class="cooking-title">Cara Memasak :</h3>
             <div class="cooking-instructions">{{ $resep->Cara_Memasak }}</div>
+        </div>
+    </div>
 
-            <!-- Rating -->
-            <div class="rating-section">
-                <span class="rating-title">Berikan rating</span>
-                <div class="stars-container">
-                    @for ($i = 1; $i <= 5; $i++)
-                        <img src="{{ asset('images/img_star.svg') }}" alt="Star {{ $i }}" class="star" data-rating="{{ $i }}" onclick="setRating({{ $i }})">
-                    @endfor
-                </div>
-            </div>
-        </main>
+    <!-- Rating -->
+    <div class="rating-section">
+        <span class="rating-title">Berikan rating</span>
+        <div class="stars-container">
+            @for ($i = 1; $i <= 5; $i++)
+                <img src="{{ asset('images/img_star.svg') }}" alt="Star {{ $i }}" class="star" data-rating="{{ $i }}" onclick="setRating({{ $i }})">
+            @endfor
+        </div>
+    </div>
+</main>
+
     </div>
     <script src="{{ asset('js/resepGudeg.js') }}"></script>
 </body>

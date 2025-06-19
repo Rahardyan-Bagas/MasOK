@@ -40,8 +40,7 @@ class ResepSeeder extends Seeder
             ],
             [
                 'Id_Makanan' => 2,
-                'Bahan' => '1 kg daging sapi (bagian paha atau sengkel), potong kotak besar
-                            1,5 liter santan kental dari 2 butir kelapa tua
+                'Bahan' => '1 kg daging sapi (bagian paha atau sengkel), potong kotak besar         1,5 liter santan kental dari 2 butir kelapa tua
                             10 siung bawang merah
                             5 siung bawang putih
                             5 buah cabai merah besar

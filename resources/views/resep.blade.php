@@ -39,6 +39,8 @@
                     <h2 class="recipe-title">{{ $makanan->Nama_Makanan }}</h2>
                     <div class="divider"></div>
                     <p class="recipe-description">{{ $makanan->Deskripsi }}</p>
+                    
+                    
                     <div class="recipe-footer">
                         <a href="{{ url('/resep/ ' . $makanan->Id_Makanan) }}" class="recipe-link">Resep Lengkap</a>
                         <div class="stars">★ ★ ★ ★ ★</div>
