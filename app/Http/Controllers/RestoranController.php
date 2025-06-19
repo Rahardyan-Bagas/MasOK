@@ -3,15 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Makanan;
 
 class RestoranController extends Controller
 {
+    public function index()
+    {
+        $restorans = Makanan::with('lokasi')->whereIn('id', [1, 2, 3])->get();
+
+        return view('MakananYogya', compact('restorans'));
+    }
     public function show($id)
     {
         $data = collect([
             1 => [
                 'Nama_Restoran' => 'Iga Bajog',
-                'Gambar' => 'img_image_16.png',
+                'Gambar' => 'img_image_21.png',
                 'Rating' => 4,0,
                 'Deskripsi' => 'Iga Bajog adalah tempat makan terkenal di Yogyakarta dengan olahan iga sapi yang lezat dan empuk, disiram dengan sambal kecap. Iga Bajog juga dikenal karena buka 24 jam non-stop, sehingga menjadi tempat makan yang nyaman untuk dinikmati kapan saja.',
                 'rekomendasi' => ['Iga Bakar Jogja', 'Sate Koyor', 'Sop Iga'],

@@ -10,45 +10,29 @@ class LokasiSeeder extends Seeder
     public function run()
     {
         Lokasi::create([
-            'Nama_Tempat' => 'Gudeg Yu Djum',
+            'Nama_Tempat' => 'Iga Bajog',
             'Kota' => 'Yogyakarta',
+            'GambarResto'=> 'img_image_21.png',
             'Provinsi' => 'DI Yogyakarta',
-            'Alamat' => 'Jl. Wijilan No.167'
+            'Alamat' => ' Jl. Wijaya Kusuma, Dero, Condongcatur, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281'
         ]);
 
         Lokasi::create([
             'Nama_Tempat' => 'Sate Klathak Pak Pong',
             'Kota' => 'Bantul',
+            'GambarResto'=> 'image.png',
             'Provinsi' => 'DI Yogyakarta',
-            'Alamat' => 'Jl. Imogiri Timur'
+            'Alamat' => 'Jl. Sultan Agung No.18, Jejeran II, Wonokromo, Kec. Pleret, Kabupaten Bantul, Daerah Istimewa Yogyakarta 55791'
         ]);
 
         Lokasi::create([
             'Nama_Tempat' => 'Bakpia Pathok 25',
             'Kota' => 'Yogyakarta',
+            'GambarResto'=> 'image2.png',
             'Provinsi' => 'DI Yogyakarta',
-            'Alamat' => 'Jl. AIP II KS Tubun'
+            'Alamat' => 'Sanggrahan Pathuk, Jl. Karel Sasuit Tubun NG/I No.504, Ngampilan, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55261'
         ]);
 
-        Lokasi::create([
-           'Nama_Tempat' => 'Mangut Lele Mbah Marto',
-            'Kota' => 'Bantul',
-            'Provinsi' => 'DI Yogyakarta',
-            'Alamat' => 'Dusun Nengahan, Sewon'
-        ]);
-
-        Lokasi::create([
-            'Nama_Tempat' => 'House of Raminten',
-           'Kota' => 'Yogyakarta',
-           'Provinsi' => 'DI Yogyakarta',
-            'Alamat' => 'Jl. Faridan M Noto No.7'
-        ]);
-
-        Lokasi::create([
-            'Nama_Tempat' => 'Angkringan Lik Man',
-            'Kota' => 'Yogyakarta',
-            'Provinsi' => 'DI Yogyakarta',
-            'Alamat' => 'Stasiun Tugu, Jl. Wongsodirjan'
-        ]);
+        
     }
 }

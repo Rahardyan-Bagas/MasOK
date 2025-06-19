@@ -37,7 +37,8 @@
         <div class="error-message">{{ $message }}</div>
       @enderror
 
-      <input type="email" name="Email" class="input-field" placeholder="Email" value="{{ old('Email') }}" required>
+      <input type="email" name="Email" class="input-field" placeholder="Email" value="{{ old('Email') }}" required pattern="[a-zA-Z0-9._%+-]+@gmail\.com" title="Email harus menggunakan domain @gmail.com">
+
       @error('Email')
         <div class="error-message">{{ $message }}</div>
       @enderror

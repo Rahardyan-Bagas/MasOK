@@ -44,16 +44,13 @@ class ResepSeeder extends Seeder
                             10 siung bawang merah
                             5 siung bawang putih
                             5 buah cabai merah besar
-                            10 buah cabai merah keriting (sesuai selera)
                             2 cm jahe
                             2 cm lengkuas
-                            2 cm kunyit (bakar sebentar)1 sdt ketumbar sangrai
-                            1 sdt jintan sangrai
+                            2 cm kunyit (bakar sebentar) 1 sdt ketumbar sangrai
                             ½ sdt pala bubuk
-                            2 batang serai, memarkan
+                            2 batang serai, tumbuk
                             5 lembar daun jeruk
-                            2 lembar daun kunyit, simpulkan
-                            2 lembar daun salam
+                            2 lembar daun kunyit dan salam
                             Garam dan gula merah secukupnya',
                 'Cara_Memasak' => 'Tumis bumbu halus hingga harum.
                                     Masukkan daging sapi, aduk rata hingga berubah warna.
@@ -76,13 +73,8 @@ class ResepSeeder extends Seeder
                             2 sdm bawang merah goreng untuk taburan
                             200 gram kacang tanah kulit,
                             disangrai, dihaluskan
-                            3 buah cabai merah keriting, digoreng
-                            4 butir kemiri, digoreng
-                            2 buah cabai merah besar, digoreng
                             3 sendok makan gula merah sisir
                             1 sendok teh garam 500 ml air panas
-                            15 buah cabai rawit merah, direbus
-                            4 buah cabai merah keriting, direbus
                             1/4 sendok teh garam',
                 'Cara_Memasak' => 'Bikin sambal kacang dahulu. Haluskan kacang tanah, cabai merah keriting, kemiri, cabai merah besar, gula merah, dan garam.
                                     Tuang air. Masak sampai matang dan kental.
