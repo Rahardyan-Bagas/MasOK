@@ -97,15 +97,15 @@
 
         .logo-container {
             background-color: transparent;
-            width: 77px;
-            height: 107px;
+            width: 90px;
+            height: 120px;
             padding: 5px;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
         .logo-image {
-      height: 80px;
+      height: 100px;
     }
     
         .logo {

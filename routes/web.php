@@ -6,6 +6,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MakananController;
 use App\Http\Controllers\RestoranController;
 use App\Http\Controllers\ResepController;
+use App\Http\Controllers\SearchController;
+use App\Http\Controllers\LokasiController;
+
+
 
 
 Route::get('/', function () {
@@ -52,11 +56,12 @@ Route::post('/login', [AuthController::class, 'login'])->name('login.process');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::post('/logout', [HomeController::class, 'logout'])->name('logout');
 
-Route::get('/makanan', [MakananController::class, 'makananJogjaManual']);
+Route::get('/makanan', [LokasiController::class, 'index'])->name('makanan.jogja');
+#Route::get('/makanan', [MakananController::class, 'makananJogjaManual']);
 
 Route::get('/restoran/{id}', [RestoranController::class, 'show']);
 
-
+Route::get('/search', [SearchController::class, 'search']);
 Route::get('/resep', [ResepController::class, 'index']);
 Route::get('/resep/{id}', [ResepController::class, 'show']);
 

@@ -27,6 +27,5 @@ class MakananSeeder extends Seeder
         'Gambar' => 'img_image_1.png',
         'Deskripsi' => 'Sate adalah makanan khas Indonesia berupa potongan daging yang ditusuk, dibakar, dan disajikan dengan bumbu kacang atau kecap. Daging yang digunakan bisa ayam, kambing, sapi, atau lainnya. Rasanya gurih, manis, dan sedikit smokey.',
     ]);
-
     }
 }

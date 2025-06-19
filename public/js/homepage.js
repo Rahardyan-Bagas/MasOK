@@ -1,35 +1,80 @@
-// Search functionality
-        function performSearch() {
-            const searchInput = document.getElementById('searchInput');
-            const query = searchInput.value.trim();
-            
-            if (query) {
-                // Add loading state
-                const searchContainer = document.querySelector('.search-container');
-                searchContainer.classList.add('loading');
-                
-                // Simulate search
-                setTimeout(() => {
-                    alert(`Mencari: "${query}". Fitur pencarian akan segera tersedia!`);
-                    searchContainer.classList.remove('loading');
-                    searchContainer.classList.add('active');
-                    
-                    // Remove active state after 2 seconds
-                    setTimeout(() => {
-                        searchContainer.classList.remove('active');
-                    }, 2000);
-                }, 1000);
-            } else {
-                alert('Silakan masukkan kata kunci pencarian.');
-            }
+document.addEventListener('DOMContentLoaded', function () {
+    const searchInput = document.getElementById('searchInput');
+    const suggestionBox = document.getElementById('searchSuggestions');
+
+    // Menampilkan saran saat mengetik
+    searchInput.addEventListener('input', function () {
+        const query = this.value.trim();
+
+        if (query.length < 2) {
+            suggestionBox.innerHTML = '';
+            return;
         }
 
-        // Enter key search
-        document.getElementById('searchInput').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                performSearch();
-            }
-        });
+        fetch(`/search?q=${encodeURIComponent(query)}`)
+            .then(response => response.json())
+            .then(data => {
+                suggestionBox.innerHTML = '';
+
+                if (data.length > 0) {
+                    data.forEach(item => {
+                        const div = document.createElement('div');
+                        div.textContent = item.nama;
+                        div.addEventListener('click', () => {
+                            if (item.type === 'restoran') {
+                                window.location.href = `/restoran/${item.id}`;
+                            } else if (item.type === 'resep') {
+                                window.location.href = `/resep/${item.id}`;
+                            }
+                        });
+                        suggestionBox.appendChild(div);
+                    });
+                } else {
+                    suggestionBox.innerHTML = '<div>Tidak ditemukan</div>';
+                }
+            })
+            .catch(error => {
+                console.error('Gagal mengambil saran:', error);
+            });
+    });
+
+    // Fungsi pencarian ketika klik tombol (ikon)
+    window.performSearch = function () {
+        const query = searchInput.value.trim();
+
+        if (query.length < 2) {
+            alert('Masukkan minimal 2 karakter.');
+            return;
+        }
+
+        fetch(`/search?q=${encodeURIComponent(query)}`)
+            .then(response => response.json())
+            .then(results => {
+                if (results.length > 0) {
+                    const result = results[0];
+                    if (result.type === 'restoran') {
+                        window.location.href = `/restoran/${result.id}`;
+                    } else if (result.type === 'resep') {
+                        window.location.href = `/resep/${result.id}`;
+                    }
+                } else {
+                    alert(`Tidak ditemukan hasil untuk: "${query}"`);
+                }
+            })
+            .catch(error => {
+                alert('Terjadi kesalahan saat pencarian.');
+                console.error(error);
+            });
+    };
+
+    // Enter key = performSearch
+    searchInput.addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            performSearch();
+        }
+    });
+});
+
 
         // Language change functionality
         function changeLanguage(lang) {

@@ -53,6 +53,7 @@ return new class extends Migration
         // Tabel Lokasi
         Schema::create('lokasi', function (Blueprint $table) {
             $table->id('Id_Lokasi');
+            $table->string('GambarResto')->nullable();
             $table->string('Nama_Tempat', 100);
             $table->string('Kota', 100)->nullable();
             $table->string('Provinsi', 100)->nullable();

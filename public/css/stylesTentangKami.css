@@ -28,11 +28,13 @@
         }
 
         .logo-container img {
-            height: 80px;
+            height: 100px;
+             height: 100px;
+            object-fit: contain;
         }
 
         .logo-image {
-            height: 80px;
+            width: 70px;
         }
 
         .menu-button {

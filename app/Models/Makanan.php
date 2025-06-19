@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
@@ -22,7 +21,11 @@ class Makanan extends Model
 
     public function lokasi()
     {
-        return $this->belongsToMany(Lokasi::class, 'makanan_lokasi', 'Id_Makanan', 'Id_Lokasi');
+        return $this->belongsToMany(Lokasi::class, 'makanan_lokasi', 'Id_Lokasi', 'Id_Makanan');
+    }
+
+    public function restoran()
+    {
+        return $this->hasOne(Restoran::class, 'makanan_id');
     }
 }
-
